@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Victoria Chelondaeva](https://up.htmlacademy.ru/htmlcss/26/user/1104827).
-* Наставник: `Неизвестно`.
+* Наставник: [Ekaterina Kunets] (https://htmlacademy.ru/profile/id465085).
 
 ---
 
