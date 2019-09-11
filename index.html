@@ -8,7 +8,7 @@
     <header>
       <nav>
         <h1>Интернет-магазин «Техномарт»</h1>
-        <a href="index.html"><img src="./img/logo.png" width="220" height="47" alt="Логотип магазина Техномарт"></a>
+        <a href=""><img src="img/logo.png" width="115" height="30" alt="Логотип магазина Техномарт"></a>
         <!--недоделано
         <form>
           <label for="search">Поиск</label>
@@ -21,38 +21,187 @@
         </ul>
       </nav>
 
-      <section>
-        <p>Интернет-магазин<br>
-        строительный материалов<br>
-        и инструментов для ремонта</p>
+      <p>Интернет-магазин<br>
+      строительный материалов<br>
+      и инструментов для ремонта</p>
      
+      <ul>
+        <li><a href="tel:+78125550555">+7 (812) 555-05-55</a></li>
+        <li>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</li>
+      </ul>
+
+      <div>
         <ul>
-          <li><a href="tel:+78125550555">+7 (812) 555-05-55</a></li>
-          <li>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</li>
+          <li><button type="button">Войти</button></li>
+          <li><button type="button">Регистрация</button></li>
         </ul>
+      </div>
 
-        <div>
-          <ul>
-            <li><button type="button">Войти</button></li>
-            <li><button type="button">Регистрация</button></li>
-          </ul>
-        </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="#">Компания</a></li>
+          <li><a href="inner.html">Каталог</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Спецпредложения</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
 
-        <nav>
-          <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about-us.html">Компания</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Спецпредложения</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
-      </section>
     </header>
 
     <main>
+      <section>
+        <!--слайдеры в див?-->
+        <p>Перфораторы</p>
+        <p>Настоящие мужские игрушки</p>
+        <img src="img/hammer-drill.jpeg" width="620" height="266" alt="Мужчина работает перфоратором">
+        <a href="inner.html">Открыть каталог</a>
+        <button type="button"><img src="img/icon-slider-left.svg" width="22" height="40" alt="Перелистнуть картинку влево"></button>
+        <button type="button"><img src="img/icon-slider-right.svg" width="22" height="40" alt="Перелистнуть картинку вправо"></button>
+
+        <p>Дрели</p>
+        <p>Соседям на радость!</p>
+        <img src="img/hammer-drill.jpeg" width="620" height="266" alt="Мужчина работает дрелью">
+        <a href="inner.html">Открыть каталог</a>
+        <button type="button"><img src="img/icon-slider-left.svg" width="22" height="40" alt="Перелистнуть картинку влево"></button>
+        <button type="button"><img src="img/icon-slider-right.svg" width="22" height="40" alt="Перелистнуть картинку вправо"></button>
+        <!--индикаторы слайдов вставятся через css?-->
+        <ul>
+          <li>
+            <p>Материалы</p>
+            <a href="#">На любой вкус</a>
+            <img src="img/flag-new.png" width="60" height="59" alt="Новинка">
+          </li>
+
+          <li>
+            <p>Инструмент</p>
+            <a href="#">На все случаи</a>
+          </li>
+
+          <li>
+            <p>Техника</p>
+            <a href="#">Для стройки</a>
+          </li>
+
+          <li>
+            <p>Скидка 50%</p>
+            <a href="#">На 350 товаров</a>
+          </li>
+
+          <li>
+            <p>Доставка</p>
+            <a href="#">Бесплатно</a>
+          </li>
+        <!--или всё же заголовки промо-блоков и слайдеров (материалы, инструмент и др. + дрели/перфораторы) в h2 поставить-->
+        </ul>
+
+        <h2>Популярные товары:</h2>
+        <a href="#"> Все популярные товары</a>
+        <ul>
+          <li>
+            <p><a href="#">Перфоратор Bosch<br>
+            BFG 9000</a></p>
+            <p><img src="img/bfg-9000" width="218" height="170" alt="Перфоратор Bosch BFG 9000"></p>
+            <ul>
+              <li><del>32500 Р.</del></li>
+              <li><ins>25500 Р.</ins></li>
+            </ul>
+            <!--кнопки появляются при наведении на карточку товара, надо сразу вставлять в вёрстку эти кнопки?-->
+            <ul>
+              <li><button type="button">Купить</button></li>
+              <li><button type="button">В закладки</button></li>
+            </ul>
+          </li>
+
+          <li>
+            <p><a href="#">Перфоратор Bosch<br>
+            BFG 3000</a></p>
+            <p><img src="img/bfg-3000" width="218" height="170" alt="Перфоратор Bosch BFG 3000"></p>
+            <ul>
+              <li><del>22500 Р.</del></li>
+              <li><ins>15500 Р.</ins></li>
+            </ul>
+            
+            <ul>
+              <li><button type="button">Купить</button></li>
+              <li><button type="button">В закладки</button></li>
+            </ul>
+          </li>
+
+          <li>
+            <p><a href="#">Перфоратор Bosch<br>
+            BFG 6000</a></p>
+            <p><img src="img/bfg-6000" width="218" height="170" alt="Перфоратор Bosch BFG 6000"></p>
+            <ul>
+              <li><del>32500 Р.</del></li>
+              <li><ins>25500 Р.</ins></li>
+            </ul>
+              
+            <ul>
+              <li><button type="button">Купить</button></li>
+              <li><button type="button">В закладки</button></li>
+            </ul>
+          </li>
+
+          <li>
+            <p><a href="#">Перфоратор Bosch<br>
+            BFG 2000</a></p>
+            <p><img src="img/bfg-2000" width="218" height="170" alt="Перфоратор Bosch BFG 2000"></p>
+            <p><img src="img/icon-new.jpg" width="20" height="20" alt="Новинка"></p>
+            <ul>
+              <li><button type="button">Купить</button></li>
+              <li><button type="button">В закладки</button></li>
+            </ul>
+            <p><ins>12500 Р.</ins></p>
+          </li>
+        </ul>
+
+        <h2>Популярные производители:</h2>
+        <a href="#">Все производители</a>
+        <ul>
+          <li><a href="#"><img src="img/brands-bosch.png" width="126" height="37" alt="Bosch/Бош"></a></li>
+          <li><a href="#"><img src="img/brands-makita.png" width="123" height="40" alt="Makita/Макита"></a></li>
+          <li><a href="#"><img src="img/brands-DeWALT.png" width="146" height="44" alt="DeWALT/Деволт"></a></li>
+          <li><a href="#"><img src="img/brands-interskol.png" width="200" height="88" alt="Интерскол"></a></li>
+          <li><a href="#"><img src="img/brands-hitachi.png" width="169" height="31" alt="Hitachi/Хитаки"></a></li>
+          <li><a href="#"><img src="img/brands-lg.png" width="121" height="73" alt="LG/Элджи"></a></li>
+          <li><a href="#"><img src="img/brands-AEG.png" width="151" height="96" alt="AEG/АЕГ"></a></li>
+          <li><a href="#"><img src="img/brands-metabo.png" width="204" height="69" alt="Metabo/Метабо"></a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Сервисы</h2>
+        <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
+        <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+        
+        <!--Здесь должен быть слайдер: при нажатии на один из пунктов списка (доставка/гарантия/кредит) показывают соответсующие пункту текст и изображение.
+          Как лучше сделать? Через <dl> <dt>Доставка</dt> <dd>Бла-бла-бла и картинка</dd>
+          или простой список доставка/гарантия/кредит и ниже списка независимые от него заголовки с параграфами и картинками по каждому пункту?
+        пока сделала по второму пути -->
+        <ul>
+          <li><button type="button">Доставка</button></li>
+          <li><button type="button">Гарантия</button></li>
+          <li><button type="button">Кредит</button></li>
+        </ul>
+
+        <h3>Доставка</h3>
+        <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
+        поднимая его на ваш этаж!</p>
+        <!--декоративное изображение-->
+
+        <h3>Гарантия</h3>
+        <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+        <!--декоративное изображение-->
+        
+        <h3>Кредит</h3>
+        <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+        <a href="#">Отправить заявку</a>
+        <!--декоративное изображение-->
+      </section>
+
       <section>
         <h2>Компания «Техномарт»</h2>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.</p>
@@ -65,9 +214,7 @@
         </ul>
 
         <a href="about-us.html">Подробнее о компании</a>
-      </section>
       
-      <section>
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:
