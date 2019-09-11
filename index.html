@@ -283,14 +283,33 @@
 
     <section>
       <h2>Мы на карте</h2>
-      <a href="map"><img src="img/map-popup.png" width="1736" height="779" alt="Офис расположен по адресу ул. Б. Конюшенная, д. 19/8"></a>
+      <a href="map"><img src="img/map-popup.png" width="1300" alt="Офис расположен по адресу ул. Б. Конюшенная, д. 19/8"></a>
       <button type="button"><!--Закрыть--></button>
     </section>
 
     <section>
       <h2>Заблудились? Напишите нам!</h2>
       <!-- модальное окно. ТЗ 3.12 и 4.4: см. папку слоёв «write us» -->
-      <button type="button">Закрыть</button>
+      <form action="" method="POST">
+        <p>
+          <label for="name">Ваше имя:
+          <input type="text" id="name" name="client's name" value="Имя Фамилия">
+          </label>
+        </p>
+        <p>
+          <label for="e-mail">Ваш e-mail:
+          <input type="text" id="e-mail" name="client's e-mail" value="email@example.com">
+          </label>
+        </p>
+        <p>
+          <label for="message">Текст письма:
+          <textarea id="message" rows="6" cols="50" name="message">В свободной форме</textarea>
+          </label>
+        </p>
+        <button type="button"><!--Закрыть--></button>
+        <button type="submit">Отправить</button>
+      </form>
+      
     </section>  
 
   </body>
