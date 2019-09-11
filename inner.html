@@ -63,9 +63,24 @@
       <h1>Перфораторы</h1>
       
       <section>
-        <h2>Фильтр товаров</h2>
-        <!--форма фильтра <form></form>
-        Производители:
+        <h2>Фильтр</h2>
+        
+        <form>
+          <p>
+            <label for="price">Цена:
+              <span>0</span>
+              <input type="range" id="price" name="price" min="0" value="30000">
+              <span>30000</span>
+            </label>
+          </p>
+        <!--разобраться с оформлением: <p> / <span> / <hr>-->
+
+          <p>Производители:</p>
+            <input type="checkbox" name="manufacturer" id="">
+            <label for=""></label>
+          
+        </form>
+        
         Bosch
         Интерскол
         Makita
@@ -77,9 +92,7 @@
         сетевые
         -->
         <button type="submit">Показать</button>
-      </section>
 
-      <section>
         <h2>Список подходящих товаров</h2>
         <ul>
           <li>
