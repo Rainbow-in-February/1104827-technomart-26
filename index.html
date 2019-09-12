@@ -7,23 +7,22 @@
   <body>
     <header>
       <nav>
-        <h1>Интернет-магазин «Техномарт»</h1>
-        <a href=""><img src="img/logo.png" width="115" height="30" style="background: #ee3643" alt="Логотип магазина Техномарт"></a>
+        <a href=""><img src="img/свг" width="115" height="30" style="background: #ee3643" alt="Логотип магазина Техномарт"></a>
         <!--недоделано
-        <form>
+        <form action="https://" action="get">
           <label for="search">Поиск</label>
           <input type="text" id="search" name="" value="Поиск">
         </form>-->
         <ul>
-          <li><a href="#">Закладки: 0</a></li>
-          <li><a href="#">Корзина: 0</a></li>
+          <li><a href="#">Закладки: <span>0</span></a></li>
+          <li><a href="#">Корзина: <span>0</span></a></li>
           <li><a href="#">Оформить заказ</a></li>
         </ul>
       </nav>
 
-      <p>Интернет-магазин<br>
+      <h1>Интернет-магазин<br>
       строительный материалов<br>
-      и инструментов для ремонта</p>
+      и инструментов для ремонта</h1>
      
       <ul>
         <li><a href="tel:+78125550555">+7 (812) 555-05-55</a></li>
@@ -53,26 +52,39 @@
 
     <main>
       <section>
-        <!--слайдеры в див?-->
-        <p>Перфораторы</p>
-        <p>Настоящие мужские игрушки</p>
-        <img src="img/hammer-drill.jpeg" width="620" height="266" alt="Мужчина работает перфоратором">
-        <a href="inner.html">Открыть каталог</a>
-        <button type="button"><img src="img/icon-slider-left.svg" width="22" height="40" alt="Перелистнуть картинку влево"></button>
-        <button type="button"><img src="img/icon-slider-right.svg" width="22" height="40" alt="Перелистнуть картинку вправо"></button>
+        <div>
+          <h2>Перфораторы</h2>
+          <p>Настоящие мужские игрушки</p>
+          <img src="img/hammer-drill.jpeg" width="620" height="266" alt="Перфораторы">
+          <a href="inner.html">Открыть каталог</a>
+          <button type="button"><img src="img/icon-slider-left.svg" width="22" height="40" alt="влево"></button>
+          <button type="button"><img src="img/icon-slider-right.svg" width="22" height="40" alt="вправо"></button>
 
-        <p>Дрели</p>
-        <p>Соседям на радость!</p>
-        <img src="img/hammer-drill.jpeg" width="620" height="266" alt="Мужчина работает дрелью">
-        <a href="inner.html">Открыть каталог</a>
-        <button type="button"><img src="img/icon-slider-left.svg" width="22" height="40" alt="Перелистнуть картинку влево"></button>
-        <button type="button"><img src="img/icon-slider-right.svg" width="22" height="40" alt="Перелистнуть картинку вправо"></button>
+          <ul>
+            <li class="slide1"></li>
+            <li class="slide2"></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Дрели</h2>
+          <p>Соседям на радость!</p>
+          <img src="img/hammer-drill.jpeg" width="620" height="266" alt="Дрели">
+          <a href="inner.html">Открыть каталог</a>
+          <button type="button"><img src="img/icon-slider-left.svg" width="22" height="40" alt="влево"></button>
+          <button type="button"><img src="img/icon-slider-right.svg" width="22" height="40" alt="вправо"></button>
+          
+          <ul>
+            <li class="slide1"></li>
+            <li class="slide2"></li>
+          </ul>
         <!--индикаторы слайдов вставятся через css?-->
+        </div>
         <ul>
           <li>
             <p>Материалы</p>
             <a href="#">На любой вкус</a>
-            <img src="img/flag-new.png" width="60" height="59" alt="Новинка">
+            <!--в стилях flag-new.png-->
           </li>
 
           <li>
@@ -97,8 +109,11 @@
         <!--или всё же заголовки промо-блоков и слайдеров (материалы, инструмент и др. + дрели/перфораторы) в h2 поставить-->
         </ul>
 
-        <h2>Популярные товары:</h2>
-        <a href="#"> Все популярные товары</a>
+        <div>
+          <h2>Популярные товары:</h2>
+          <a href="#"> Все популярные товары</a>
+        </div>
+
         <ul>
           <li>
             <p><a href="#">Перфоратор Bosch<br>
@@ -106,9 +121,9 @@
             <p><img src="img/bfg-9000" width="218" height="170" alt="Перфоратор Bosch BFG 9000"></p>
             <ul>
               <li><del>32500 Р.</del></li>
-              <li><ins>25500 Р.</ins></li>
+              <li><button type="button">25500 Р.</button></li>
             </ul>
-            <!--кнопки появляются при наведении на карточку товара, надо сразу вставлять в вёрстку эти кнопки?-->
+            
             <ul>
               <li><button type="button">Купить</button></li>
               <li><button type="button">В закладки</button></li>
@@ -121,7 +136,7 @@
             <p><img src="img/bfg-3000" width="218" height="170" alt="Перфоратор Bosch BFG 3000"></p>
             <ul>
               <li><del>22500 Р.</del></li>
-              <li><ins>15500 Р.</ins></li>
+              <li><button type="button">15500 Р.</button></li>
             </ul>
             
             <ul>
@@ -136,7 +151,7 @@
             <p><img src="img/bfg-6000" width="218" height="170" alt="Перфоратор Bosch BFG 6000"></p>
             <ul>
               <li><del>32500 Р.</del></li>
-              <li><ins>25500 Р.</ins></li>
+              <li><button type="button">25500 Р.</button></li>
             </ul>
               
             <ul>
@@ -149,17 +164,20 @@
             <p><a href="#">Перфоратор Bosch<br>
             BFG 2000</a></p>
             <p><img src="img/bfg-2000" width="218" height="170" alt="Перфоратор Bosch BFG 2000"></p>
-            <p><img src="img/flag-new.png" width="60" height="60" alt="Новинка"></p>
+            <!--в стилях flag-new.png-->
             <ul>
               <li><button type="button">Купить</button></li>
               <li><button type="button">В закладки</button></li>
             </ul>
-            <p><ins>12500 Р.</ins></p>
+            <button type="button">12500 Р.</button>
           </li>
         </ul>
 
-        <h2>Популярные производители:</h2>
-        <a href="#">Все производители</a>
+        <div>
+          <h2>Популярные производители:</h2>
+          <a href="#">Все производители</a>
+        </div>
+        
         <ul>
           <li><a href="#"><img src="img/brands-bosch.png" width="126" height="37" alt="Bosch/Бош"></a></li>
           <li><a href="#"><img src="img/brands-makita.png" width="123" height="40" alt="Makita/Макита"></a></li>
@@ -177,10 +195,6 @@
         <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
         <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         
-        <!--Здесь должен быть слайдер: при нажатии на один из пунктов списка (доставка/гарантия/кредит) показывают соответсующие пункту текст и изображение.
-          Как лучше сделать? Через <dl> <dt>Доставка</dt> <dd>Бла-бла-бла и картинка</dd>
-          или простой список доставка/гарантия/кредит и ниже списка независимые от него заголовки с параграфами и картинками по каждому пункту?
-        пока сделала по второму пути -->
         <ul>
           <li><button type="button">Доставка</button></li>
           <li><button type="button">Гарантия</button></li>
@@ -260,7 +274,7 @@
       </div>
         
       <p>Обратная связь:<br>
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <a href="mailto:mail@htmlacademy.ru" target="_blank">mail@htmlacademy.ru</a>
       </p>
 
       <p>Разработано -<br>
