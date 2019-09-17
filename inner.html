@@ -66,27 +66,25 @@
           <form action="http://" method="get" oninput="maxpriceoutput.value=maxprice.value">
             <div>
               <label for="price">Цена:
-                <!-- <span>0</span> Это будет отображаться через output и JS?-->
                 <!--ДЛЯ СЕБЯ: посм. как включить бегунок минимальной цены + в тег форма вставить oninput event for minimal price-->
-                <input type="range" id="price" name="maxprice" min="0" value="30000">
-                <!-- <span>30000</span> -->
+                <input type="range" id="price" name="maxprice" min="0" max="40000" step="500" value="30000">
               </label>
               <p>
-                <output name="minpriceoutput"></output>
+                <output name="minpriceoutput">0</output>
                 &ndash;
-                <output name="maxpriceoutput"></output>
+                <output name="maxpriceoutput">30000</output>
               </p>
             </div>
 
             <div>
-              <p>Производители:</p>
+              <h3>Производители:</h3>
               <input type="checkbox" name="manufacturer" id="bosch" value="Bosch" checked>
               <label for="bosch">Bosch</label>
             
               <input type="checkbox" name="manufacturer" id="interskol" value="Интерскол">
               <label for="interskol">Интерскол</label>
             
-              <input type="checkbox" name="manufacturer" id="Makita" value="Makita" ckecked>
+              <input type="checkbox" name="manufacturer" id="Makita" value="Makita" checked>
               <label for="Makita">Makita</label>
             
               <input type="checkbox" name="manufacturer" id="dewalt" value="DeWALT">
@@ -94,9 +92,10 @@
             
               <input type="checkbox" name="manufacturer" id="Hitachi" value="Hitachi">
               <label for="Hitachi">Hitachi</label>
-              <hr>
+            </div>
 
-              <p>Питание:</p>
+            <div>
+              <h3>Питание:</h3>
               <input type="radio" name="power" id="battery" value="аккумуляторные" checked>
               <label for="battery">аккумуляторные</label>
             
