@@ -67,20 +67,21 @@
           <h2>Фильтр:</h2>
         
           <form action="https://echo.htmlacademy.ru" method="get" oninput="maxpriceoutput.value=maxprice.value">
-            <div>
-              <label for="price">Цена:
-                <!--ДЛЯ СЕБЯ: посм. как включить бегунок минимальной цены + в тег форма вставить oninput event for minimal price-->
+            <fieldset>
+              <legend for="price">Цена:</legend>
+                <!--ДЛЯ СЕБЯ: бегунок минимальной цены через интерактивный див (JS) 
+                  + как в таком случае в тег форма вставить oninput event for minimal price-->
                 <input type="range" id="price" name="maxprice" min="0" max="40000" step="500" value="30000">
-              </label>
+              
               <p>
                 <output name="minpriceoutput">0</output>
                 &ndash;
                 <output name="maxpriceoutput">30000</output>
               </p>
-            </div>
+            </fieldset>
 
-            <div>
-              <h3>Производители:</h3>
+            <fieldset>
+              <legend>Производители:</legend>
               <input type="checkbox" name="manufacturer" id="bosch" value="Bosch" checked>
               <label for="bosch">Bosch</label>
             
@@ -95,16 +96,16 @@
             
               <input type="checkbox" name="manufacturer" id="Hitachi" value="Hitachi">
               <label for="Hitachi">Hitachi</label>
-            </div>
+            </fieldset>
 
-            <div>
-              <h3>Питание:</h3>
+            <fieldset>
+              <legend>Питание:</legend>
               <input type="radio" name="power" id="battery" value="аккумуляторные" checked>
               <label for="battery">аккумуляторные</label>
             
               <input type="radio" name="power" id="mains" value="сетевые">
               <label for="mains">сетевые</label>
-            </div>
+            </fieldset>
           </form>
           <button class="button-filter" type="submit">Показать</button>
         </aside>
@@ -116,8 +117,8 @@
             <li><button type="button">По типу</button></li>
             <li><button type="button">По функционалу</button></li>
           </ul>
-          <button class="button-sort-lt" type="submit">&lt;</button>
-          <button class="button-sort-gt" type="submit">&gt;</button>
+          <button arialabel="от меньшего к большему" class="button-sort-lt" type="submit">&lt;</button>
+          <button arialabel="от большего к меньшему"class="button-sort-gt" type="submit">&gt;</button>
         </div>
 
         <h2 class="visually-hidden">Список подходящих товаров</h2>
@@ -289,9 +290,9 @@
               
       <div>
         <ul class="footer-social">
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li><a class="social-button" href="#" aria-label="Техномарт в Вконтакте">Вконтакте</a></li>
+          <li><a class="social-button" href="#" aria-label="Техномарт в Фейсбуке">Фейсбук</a></li>
+          <li><a class="social-button" href="#" aria-label="Техномарт в Инстаграме">Инстаграм</a></li>
         </ul>
       </div>
               
@@ -307,9 +308,9 @@
     <!--модальное окно после нажатия "купить" ТЗ 4.5 -->
     <section class="modal modal-cart">
       <p>Товар добавлен в корзину!</p>
-      <button class="modal-close" type="">x</button>
-      <button type="">Оформить заказ</button>
-      <button type="">Продолжить покупки</button>
+      <button class="modal-close" type="button" aria-label="Закрыть">x</button>
+      <a href="">Оформить заказ</a>
+      <button type="submit">Продолжить покупки</button>
     </section>
   </body>
 </html>
