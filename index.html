@@ -6,14 +6,15 @@
   </head>
   <body>
     <header>
-      <nav class="navigation-header">
-        <!--фон добавлен временно-->
+      <div class="header-top">
+      <!--фон добавлен временно-->
         <a class="header-logo" href="">
           <img src="img/logo-technomart.svg" width="110" height="20" style="background: #ee3643" alt="Логотип магазина Техномарт">
         </a>
  
-        <form action="https://" method="get">
-          <input type="search" id="site-search" name="q" placeholder="Поиск:">
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <input type="search" name="site-search" placeholder="Поиск:">
+          <button type="submit" aria-label="найти"></button>
         </form>
 
         <ul>
@@ -21,22 +22,24 @@
           <li><a href="#">Корзина: <span>0</span></a></li>
           <li><a href="#">Оформить заказ</a></li>
         </ul>
+      </div>
 
-        <h1>Интернет-магазин<br>
-        строительный материалов<br>
-        и инструментов для ремонта</h1>
+      <h1 class="site-description">Интернет-магазин<br>
+      строительный материалов<br>
+      и инструментов для ремонта</h1>
      
+      <ul class="header-contacts">
+        <li><a href="tel:+78125550555">+7 (812) 555-05-55</a></li>
+        <li>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</li>
+      </ul>
+
+      <ul class="login">
+        <li><a href="#">Войти</a></li>
+        <li><a href="#">Регистрация</a></li>
+      </ul>
+
+      <nav class="navigation-header">
         <ul>
-          <li><a href="tel:+78125550555">+7 (812) 555-05-55</a></li>
-          <li>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</li>
-        </ul>
-
-        <ul >
-          <li><button type="button">Войти</button></li>
-          <li><button type="button">Регистрация</button></li>
-        </ul>
-
-        <ul class="site-navigation">
           <li><a href="index.html">Главная</a></li>
           <li><a href="#">Компания</a></li>
           <li><a href="#">Каталог</a></li>
