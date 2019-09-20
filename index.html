@@ -198,7 +198,7 @@
         <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
         <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         
-        <ul>
+        <ul class="services-tabs">
           <li><button type="button">Доставка</button></li>
           <li><button type="button">Гарантия</button></li>
           <li><button type="button">Кредит</button></li>
@@ -237,7 +237,7 @@
           заехав в наш офис:
         </p>
 
-        <a href="img/map-popup.png">
+        <a href="img/map-popup.png" aria-label="Ссылка на сервис карт">
           <img src="img/map-small.png" width="300" height="158" alt="Офис расположен по адресу ул. Б. Конюшенная, д. 19/8">
         </a>
 
@@ -275,9 +275,9 @@
         
       <div>
         <ul class="footer-social">
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li><a class="social-button" href="#" aria-label="Техномарт в Вконтакте">Вконтакте</a></li>
+          <li><a class="social-button" href="#" aria-label="Техномарт в Фейсбуке">Фейсбук</a></li>
+          <li><a class="social-button" href="#" aria-label="Техномарт в Инстаграме">Инстаграм</a></li>
         </ul>
       </div>
         
@@ -294,19 +294,19 @@
       <h2 >Личный кабинет</h2>
       <p>Введите свой логин и пароль.</p>
       <!--здесь будет <form></form>-->
-      <button type="button">х</button>
+      <button type="button" aria-label="Закрыть">х</button>
     </section>
 
     <section class="modal modal-signup">
       <h2>Регистрация</h2>
       <!--Вроде в макете нет этого окна здесь будет <form></form>-->
-      <button class="modal-close" type="button">х</button>
+      <button class="modal-close" type="button" aria-label="Закрыть">х</button>
     </section>
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Мы на карте</h2>
       <a href="map"><img src="img/map-popup.png" width="940" height="446" alt="Офис расположен по адресу ул. Б. Конюшенная, д. 19/8"></a>
-      <button class="modal-close" type="button">x</button>
+      <button class="modal-close" type="button" aria-label="Закрыть">x</button>
     </section>
 
     <section class="modal modal-writeus">
@@ -314,24 +314,21 @@
       <!-- модальное окно. ТЗ 3.12 и 4.4: см. папку слоёв «write us» -->
       <form action="" method="POST">
         <p>
-          <label for="name">Ваше имя:
+          <label for="name">Ваше имя:</label>
           <input type="text" id="name" name="client's name" placeholder="Имя Фамилия" required>
-          </label>
         </p>
         <p>
-          <label for="e-mail">Ваш e-mail:
+          <label for="e-mail">Ваш e-mail:</label>
           <input type="email" id="e-mail" name="client's e-mail" placeholder="email@example.com" required>
-          </label>
         </p>
         <p>
-          <label for="message">Текст письма:
+          <label for="message">Текст письма:</label>
           <textarea id="message" rows="6" cols="50" name="message">В свободной форме</textarea>
-          </label>
         </p>
-        <button class="modal-close" type="button">x</button>
-        <button type="submit">Отправить</button>
+        
       </form>
-      
+      <button class="modal-close" type="button" aria-label="Закрыть">x</button>
+      <button type="submit">Отправить</button>
     </section>  
 
   </body>
