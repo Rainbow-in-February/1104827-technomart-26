@@ -15,7 +15,6 @@
         <form action="https://echo.htmlacademy.ru" method="get">
           <input type="search" name="site-search" placeholder="Поиск:">
         </form>
-        <button type="submit" aria-label="найти"></button>
 
         <ul>
           <li class="bookmarks bookmarks-full"><a href="#">Закладки: <span>0</span></a></li>
@@ -23,33 +22,33 @@
           <li><a href="#">Оформить заказ</a></li>
         </ul>
       </div>
-
-      <h1 class="site-description">Интернет-магазин<br>
-      строительный материалов<br>
-      и инструментов для ремонта</h1>
+      <div>
+        <h1 class="site-description">Интернет-магазин<br>
+        строительный материалов<br>
+        и инструментов для ремонта</h1>
      
-      <ul class="header-contacts">
-        <li><a href="tel:+78125550555">+7 (812) 555-05-55</a></li>
-        <li>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</li>
-      </ul>
-
-      <ul class="login">
-        <li><a href="#">Войти</a></li>
-        <li><a href="#">Регистрация</a></li>
-      </ul>
-
-      <nav aria-label="Навигация по сайту" class="navigation-header">
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="#">Компания</a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
+        <ul class="header-contacts">
+          <li><a href="tel:+78125550555">+7 (812) 555-05-55</a></li>
+          <li>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</li>
         </ul>
-      </nav>
 
+        <ul class="login">
+          <li><a href="#">Войти</a></li>
+          <li><a href="#">Регистрация</a></li>
+        </ul>
+
+        <nav class="navigation-header">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">Компания</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Спецпредложения</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+      </nav>
+      </div>
     </header>
 
     <main>
@@ -97,14 +96,8 @@
             </li>
           </ul>
 
-          <ul class="slider-button">
-            <li>
-              <button type="button"><img src="img/icon-slider-left.svg" width="22" height="40" alt="влево"></button>
-            </li>
-            <li>
-              <button type="button"><img src="img/icon-slider-right.svg" width="22" height="40" alt="вправо"></button>
-            </li>
-          </ul>
+          <a href="#" class="slider-button-left" aria-label="влево" ></a>
+          <a href="#" class="slider-button-right" aria-label="вправо"></a>
             
           <ul class="slider-pagination-list">
             <li class="slider-pagination-item" aria-label="слайд первый"></li>
@@ -122,14 +115,14 @@
             <h3><a href="#">Перфоратор Bosch<br>
             BFG 9000</a></h3>
             <img src="img/bfg-9000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 9000">
+            <ul class="buy-it">
+              <li><a href="#" class="to-cart" aria-label="Купить">Купить</a></li>
+              <li><a href="#" class="bookmark-it" aria-label="В закладки">В закладки</button></li>
+            </ul>
+            
             <ul>
               <li><del>32500 Р.</del></li>
               <li><button class="button-price" type="button">25500 Р.</button></li>
-            </ul>
-            
-            <ul class="buy-it">
-              <li><button type="button">Купить</button></li>
-              <li><button type="button">В закладки</button></li>
             </ul>
           </li>
 
@@ -137,14 +130,14 @@
             <h3><a href="#">Перфоратор Bosch<br>
             BFG 3000</a></h3>
             <img src="img/bfg-3000-2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 3000">
+            <ul class="buy-it">
+              <li><a href="#" class="to-cart" aria-label="Купить">Купить</a></li>
+              <li><a href="#" class="bookmark-it" aria-label="В закладки">В закладки</a></li>
+            </ul>
+            
             <ul>
               <li><del>22500 Р.</del></li>
               <li><button class="button-price" type="button">15500 Р.</button></li>
-            </ul>
-            
-            <ul class="buy-it">
-              <li><button type="button">Купить</button></li>
-              <li><button type="button">В закладки</button></li>
             </ul>
           </li>
 
@@ -152,14 +145,14 @@
             <h3><a href="#">Перфоратор Bosch<br>
             BFG 6000</a></h3>
             <img src="img/bfg-6000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 6000">
+            <ul class="buy-it">
+              <li><a href="#" class="to-cart" aria-label="Купить">Купить</a></li>
+              <li><a href="#" class="bookmark-it" aria-label="В закладки">В закладки</a></li>
+            </ul>
+            
             <ul>
               <li><del>32500 Р.</del></li>
               <li><button class="button-price" type="button">25500 Р.</button></li>
-            </ul>
-              
-            <ul class="buy-it">
-              <li><button type="button">Купить</button></li>
-              <li><button type="button">В закладки</button></li>
             </ul>
           </li>
 
@@ -168,11 +161,12 @@
             BFG 2000</a></h3>
             <img src="img/bfg-3000-2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 2000">
             <!--в стилях flag-new.png-->
-            <button class="button-price" type="button">12500 Р.</button>
             <ul class="buy-it">
-              <li><button type="button">Купить</button></li>
-              <li><button type="button">В закладки</button></li>
-            </ul>  
+              <li><a href="#" class="to-cart" aria-label="Купить">Купить</a></li>
+              <li><a href="#" class="bookmark-it" aria-label="В закладки">В закладки</a></li>
+            </ul>
+            
+            <button class="button-price" type="button">12500 Р.</button>
           </li>
         </ul>
 
@@ -238,6 +232,7 @@
         </p>
 
         <a href="img/map-popup.png" aria-label="Ссылка на сервис карт">
+        <!--позже попробовать встроить интерактивную карту-->
           <img src="img/map-small.png" width="300" height="158" alt="Офис расположен по адресу ул. Б. Конюшенная, д. 19/8">
         </a>
 
@@ -253,7 +248,7 @@
       <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       <a href="tel:+78125550555">+7 (812) 555-05-55</a>
         
-      <nav aria-label="Навигация по сайту" class="navigation-footer">
+      <nav class="navigation-footer">
         <ul>
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
@@ -290,19 +285,6 @@
       </p>
     </footer>
 
-    <section class="modal modal-login">
-      <h2 >Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
-      <!--здесь будет <form></form>-->
-      <button type="button" aria-label="Закрыть">х</button>
-    </section>
-
-    <section class="modal modal-signup">
-      <h2>Регистрация</h2>
-      <!--Вроде в макете нет этого окна здесь будет <form></form>-->
-      <button class="modal-close" type="button" aria-label="Закрыть">х</button>
-    </section>
-
     <section class="modal modal-map">
       <h2 class="visually-hidden">Мы на карте</h2>
       <a href="map"><img src="img/map-popup.png" width="940" height="446" alt="Офис расположен по адресу ул. Б. Конюшенная, д. 19/8"></a>
@@ -325,10 +307,10 @@
           <label for="message">Текст письма:</label>
           <textarea id="message" rows="6" cols="50" name="message">В свободной форме</textarea>
         </p>
-        
+        <button class="modal-close" type="button" aria-label="Закрыть">x</button>
+        <button type="submit">Отправить</button>
       </form>
-      <button class="modal-close" type="button" aria-label="Закрыть">x</button>
-      <button type="submit">Отправить</button>
+      
     </section>  
 
   </body>
