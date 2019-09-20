@@ -14,12 +14,12 @@
  
         <form action="https://echo.htmlacademy.ru" method="get">
           <input type="search" name="site-search" placeholder="Поиск:">
-          <button type="submit" aria-label="найти"></button>
         </form>
+        <button type="submit" aria-label="найти"></button>
 
         <ul>
-          <li><a href="#">Закладки: <span>0</span></a></li>
-          <li><a href="#">Корзина: <span>0</span></a></li>
+          <li class="bookmarks bookmarks-full"><a href="#">Закладки: <span>0</span></a></li>
+          <li class="cart cart-full"><a href="#">Корзина: <span>0</span></a></li>
           <li><a href="#">Оформить заказ</a></li>
         </ul>
       </div>
@@ -312,7 +312,7 @@
     <section class="modal modal-writeus">
       <h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
       <!-- модальное окно. ТЗ 3.12 и 4.4: см. папку слоёв «write us» -->
-      <form action="" method="POST">
+      <form action="https://echo.htmlacademy.ru" method="POST">
         <p>
           <label for="name">Ваше имя:</label>
           <input type="text" id="name" name="client's name" placeholder="Имя Фамилия" required>
