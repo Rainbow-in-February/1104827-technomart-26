@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    width: 100%;
 /*
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -13,7 +14,7 @@ body {
     margin: 0;
     font-family: "Cuprum", "Bahnschrift Condensed", "Arial Narrow", sans-serif;
     background: #fff;
-    width: 100%;
+    
 }
 
 main,
@@ -31,16 +32,20 @@ a {
     color: #fff;
 }
 
+header {
+    background-color: #f4f7f9;
+}
+
 div.header-top {
     display: inline-flex;
     -webkit-display: inline-flex;
-    padding-inline-start: 130px;
-    padding-inline-end: 130px;
+    padding-left: 130px;
+    padding-right: 130px;
     margin: 0;
     padding-top: 0;
-    width: 100%;
     height: 42px;
     background-color: #293449;
+    
     font-size: 17px;
     line-height: 18px;
     color: #fff;
@@ -71,7 +76,9 @@ a.header-logo img:active {
 
 
 .header-top input {
-    width: 270px;
+    width: 300px;
+    height: 100%;
+    padding-left: 50px;
     font-family: "Cuprum", "Arial Narrow", sans-serif;
     font-size: 17px;
     line-height: 18px;
@@ -156,9 +163,7 @@ ul.cart-navigation {
 }
 */
 
-header div {
-    background-color: #f4f7f9;
-    background-size: 100% 278px;
+header div {    
     padding-top: 46px;
 }
 
@@ -316,7 +321,48 @@ ul.profile-navigation {
     color: #a1a4a8;
 }
 
+a.button,
+a.to-cart,
+a.bookmark-it {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
 
+a.button {
+    background-color: #ee3643;
+}
+
+a.to-cart {
+    background-color: #63a63e;
+}
+
+a.bookmark-it {
+    color: #32425c;
+    background-color: #fff;
+    border: 2px solid #63a63e;
+}
+
+.index-about-us h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.index-about-us p {
+    font-family: "PT Sans", "Arial Narrow", sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000;
+}
+
+.index-about-us li {
+    font-size: 18px;
+    line-height: 20px;
+    color: #000;
+}
 .modal {
     display: none;
 }
