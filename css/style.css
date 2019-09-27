@@ -1,3 +1,7 @@
+/* 
+@counter-style dash {}
+*/
+
 html {
     box-sizing: border-box;
     width: 100%;
@@ -173,6 +177,7 @@ header div {
     font-style: italic;
     font-weight: normal;
     color: #ee3643;
+    padding-left: 51px;
 }
 
 ul.header-contacts {
@@ -295,13 +300,14 @@ ul.profile-navigation {
     list-style: none;
     background-color: #32425c;
     box-shadow: 0px 5px #293449;
-
+    margin-bottom: 60px;
 }
 
 .navigation-header li {
     padding-top: 22px;
     padding-bottom: 18px;
     padding-left: 30px;
+    padding-right: 30px;
 }
 
 .navigation-header li:hover {
@@ -321,16 +327,147 @@ ul.profile-navigation {
     color: #a1a4a8;
 }
 
+.breadcrumbs {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current,
+section.suggestions {
+    font-family: "PT Sans";
+    font-size: 13px;
+    line-height: 18px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.breadcrumbs a:first-of-type {
+    background-image: url("img/icon-home.svg");
+}
+
+h1.catalog-group {
+    font-family: "Cuprum";
+    font-size: 30px;
+    line-height: 30px;
+    color: #32425c;
+    text-transform: uppercase;
+    background-color: #f2f6f8;
+    padding-left: 30px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+/*
+aside {
+    max-width: 220px;
+    float: left;
+    margin-right: 20px;
+}
+*/
+.filter, 
+.sort-by h2 {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: normal;
+    background-color: #f7f3ec;
+    border: 1px solid #f7f3ec;
+    border-radius: 3px;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    padding-left: 19px;
+}
+
+h2.filter {
+    max-width: 220px;
+} 
+
+.price-filter label,
+.brand-filter h3,
+.power-filter h3 {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.brand-filter h3,
+.power-filter h3 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/*
+.brand-filter h3::before,
+.power-filter h3::before {
+    content: "-";
+    display: block;
+    text-transform: underline;
+    color: #c5c5c5;
+}  */
+
+input[type="range"] {
+    display: block;
+    background-color: #f7f3ec;
+    border: 1px solid #f7f3ec;
+    border-radius: 3px;
+    max-width: 220px;
+    max-height: 79px;
+    padding: 30px 20px;
+}
+
+output {
+    font-size: 17px;
+    line-height: 18px;
+    background-color: #f7f3ec;
+    border: 1px solid #f7f3ec;
+    border-radius: 3px;
+    width: 95px;
+    padding: 13px 14px;
+    margin-bottom: 25px;
+}
+
+.brand-filter label,
+.power-filter label {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.button-filter {
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: 1px solid #c5c5c5;
+    border-radius: 3px;
+    width: 140px;
+    padding: 5px 38px;
+    margin-top: 70px;
+}
+
 a.button,
 a.to-cart,
 a.bookmark-it {
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
+    
 }
 
 a.button {
     background-color: #ee3643;
+    border: 1px solid #ee3643;
+    border-radius: 3px;
+    
+}
+
+a.button:hover {
+    background-color: #ca2c37;
+}
+
+a.button:active {
+    background-color: #ba2732;
 }
 
 a.to-cart {
@@ -341,6 +478,35 @@ a.bookmark-it {
     color: #32425c;
     background-color: #fff;
     border: 2px solid #63a63e;
+}
+
+/*
+a.popular-brands,
+a.popular-products {
+    
+}
+*/
+
+.write-us,
+.about-us {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 86px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.about-us {
+    max-width: 220px;
+}
+
+.write-us {
+    max-width: 300px;
+}
+
+.index-about-us {
+    margin-top: 80px;
 }
 
 .index-about-us h2 {
@@ -356,13 +522,148 @@ a.bookmark-it {
     font-size: 13px;
     line-height: 24px;
     color: #000;
+    max-width: 520px;
+    margin-top: 28px;
+}
+
+.index-about-us ul {
+    margin-top: 22px;
+   /* list-style-type: dash; */
 }
 
 .index-about-us li {
     font-size: 18px;
     line-height: 20px;
     color: #000;
+    margin-bottom: 20px;
 }
+
+.small-map {
+    margin-top: 35px;
+}
+
+footer {
+    
+    background-color: #32425c;
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+.footer-2 {
+   background-color: #293449;
+}
+
+img.footer-logo {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    padding-left: 37px;
+    padding-right: 37px;
+    background-color: #ee3643;
+    box-shadow: 0px 5px #b52933; 
+}
+
+p.footer-contacts {
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+p.copyright {
+    margin-top: 90px;
+    margin-bottom: 0px;
+}
+
+p.copyright + p {
+    margin-top: 0px;
+}
+
+p.copyright,
+p.copyright + p,
+p.webdeveloper,
+p.email,
+p.webdeveloper a,
+p.email a {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+p.footer-contacts + a {
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 0;
+}
+
+.navigation-footer ul {
+    list-style: none;
+    float: right;
+    padding-left: 59px;
+}
+
+.footer-categories a,
+.email a,
+.webdeveloper a {
+    color: #ffd180;
+}
+
+.navigation-footer a:hover,
+.email a:hover,
+.webdeveloper a:hover {
+    text-decoration: underline;
+}
+
+.navigation-footer a:active {
+    color: #a4abb4;
+    text-decoration: none;
+}
+
+.footer-categories a:active {
+    color: #ad956f;
+    text-decoration: none;
+}
+
+.email a:active,
+.webdeveloper a:active {
+    color: #ee3643;
+    text-decoration: none;
+}
+
+.footer-social ul {
+    list-style: none;
+}
+
+.social-button {
+    background-color: #212a3a;
+    border: 1px solid #212a3a;
+    border-radius: 50%;
+}
+
+a.social-button:hover,
+a.social-button:active {
+    background-color: #ee3643;
+    border: 1px solid #ee3643;
+}
+
+.vk {
+    background-image: url("img/icon-vk.svg");
+    background-repeat: no-repeat;
+    background-size: 26px 15px;
+}
+
+.fb {
+    background-image: url("img/icon-fb.svg");
+    background-repeat: no-repeat;
+    background-size: 12px 22px;
+}
+
+.instagram {
+    background-image: url("img/icon-insta.svg");
+    background-repeat: no-repeat;
+    background-size: 22px 22px; 
+}
+
 .modal {
     display: none;
 }
