@@ -20,9 +20,9 @@
         </form>
 
         <ul class="cart-navigation">
-          <li class="bookmarks bookmarks-full"><a href="#">Закладки: <span>0</span></a></li>
-          <li class="cart cart-full"><a href="#">Корзина: <span>10</span></a></li>
-          <li><a href="#">Оформить заказ</a></li>
+          <li><a class="bookmarks bookmarks-full" href="#">Закладки: <span>0</span></a></li>
+          <li><a class="cart cart-full" href="#">Корзина: <span>10</span></a></li>
+          <li><a class="order" href="#">Оформить заказ</a></li>
         </ul>
       </div>
       
@@ -37,13 +37,13 @@
         </ul>
 
         <ul class="profile-navigation">
-          <li class="user"><a href="#">Равшан Джамшутович</a></li>
-          <li class="log-out"><a href="#" aria-label="Выход из профиля"></a></li>
-          <li class="my-orders"><a href="#">Мои заказы</a></li>
-          <li class="my-profile"><a href="#">Личный кабинет</a></li>
+          <li><a class="user" href="#">Равшан Джамшутович</a></li>
+          <li><a class="log-out" href="#" aria-label="Выход из профиля"></a></li>
+          <li><a class="my-orders" href="#">Мои заказы</a></li>
+          <li><a class="my-profile" href="#">Личный кабинет</a></li>
         </ul>
 
-        <nav aria-label="Навигация по сайту" class="navigation-header">  
+        <nav aria-label="Навигация по сайту" class="header-navigation">  
           <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="#">Компания</a></li>
@@ -119,136 +119,136 @@
         <div class="sort-by">
           <h2>Сортировка:</h2>
           <ul>
-            <li><a href="#" class="by-price">По цене</a></li>
-            <li><a href="#" class="by-type">По типу</a></li>
-            <li><a href="#" class="by-function">По функционалу</a></li>
+            <li><a class="by-price" href="#">По цене</a></li>
+            <li><a class="by-type" href="#">По типу</a></li>
+            <li><a class="by-function" href="#">По функционалу</a></li>
           </ul>
           <a href="#" arialabel="от меньшего к большему" class="button-sort-lt">&lt;</a>
           <a href="#" arialabel="от большего к меньшему" class="button-sort-gt">&gt;</a>
         </div>
 
         <h2 class="visually-hidden">Список подходящих товаров</h2>
-        <div>
-        <ul>
-          <li>
+        <div class="search-results-container">
+        <ul class="search-results">
+          <li class="product-card">
             <h3><a href="#">Перфоратор Bosch<br>
               BFG 3000</a>
             </h3>
             <img src="img/bfg-3000-2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 3000">
             <ul class="buy-it">
-              <li><a href="#" class="to-cart">Купить</a></li>
-              <li><a href="#" class="bookmark-it">В закладки</a></li>
+              <li><a class="to-cart" href="#">Купить</a></li>
+              <li><a class="bookmark-it" href="#">В закладки</a></li>
             </ul>
             <ul>
-              <li><del>22500 Р.</del></li>
-              <li><button class="button-price" type="button">15500 Р.</button></li>
+              <li class="old-price"><del>22500 Р.</del></li>
+              <li class="new-price">15500 Р.</li>
             </ul>
           </li>
 
-          <li>
+          <li class="product-card">
             <h3><a href="#">Перфоратор Bosch<br>
               BFG 6000</a></h3>
             <img src="img/bfg-6000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 6000">
             <ul class="buy-it">
-              <li><a href="#" class="to-cart">Купить</a></li>
-              <li><a href="#" class="bookmark-it">В закладки</a></li>
+              <li><a class="to-cart" href="#">Купить</a></li>
+              <li><a class="bookmark-it" href="#">В закладки</a></li>
             </ul>
             <ul>
-              <li><del>30500 Р.</del></li>
-              <li><button class="button-price" type="button">25500 Р.</button></li>
+              <li class="old-price"><del>30500 Р.</del></li>
+              <li class="new-price">25500 Р.</li>
             </ul>
           </li>
 
-          <li>
+          <li class="product-card">
             <h3><a href="#">Перфоратор Bosch<br>
               BFG 2000</a></h3>
             <img src="img/bfg-3000-2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 2000">
             <!--в стилях flag-new.png-->
             <ul class="buy-it">
-              <li><a href="#" class="to-cart">Купить</a></li>
-              <li><a href="#" class="bookmark-it">В закладки</a></li>
+              <li><a class="to-cart" href="#">Купить</a></li>
+              <li><a class="bookmark-it" href="#">В закладки</a></li>
             </ul>
-            <button class="button-price" type="button">12500 Р.</button>
+            <p class="new-price">12500 Р.</p>
           </li>
 
-          <li>
+          <li class="product-card">
             <h3><a href="#">Перфоратор Bosch<br>
               BFG 3000</a></h3>
             <img src="img/bfg-3000-2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 3000">
             <ul class="buy-it">
-              <li><a href="#" class="to-cart">Купить</a></li>
-              <li><a href="#" class="bookmark-it">В закладки</a></li>
+              <li><a class="to-cart" href="#">Купить</a></li>
+              <li><a class="bookmark-it" href="#">В закладки</a></li>
             </ul>
             <ul>
-              <li><del>22500 Р.</del></li>
-              <li><button class="button-price" type="button">15500 Р.</button></li>
+              <li class="old-price"><del>22500 Р.</del></li>
+              <li class="new-price">15500 Р.</li>
             </ul>
           </li>
 
-          <li>
+          <li class="product-card">
             <h3><a href="#">Перфоратор Bosch<br>
               BFG 6000</a></h3>
             <img src="img/bfg-6000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 6000">
             <!--в стилях flag-new.png-->
             <ul class="buy-it">
-              <li><a href="#" class="to-cart">Купить</a></li>
-              <li><a href="#" class="bookmark-it">В закладки</a></li>
+              <li><a class="to-cart" href="#">Купить</a></li>
+              <li><a class="bookmark-it" href="#">В закладки</a></li>
             </ul>
             <ul>
-              <li><del>30500 Р.</del></li>
-              <li><button class="button-price" type="button">25500 Р.</button></li>
+              <li class="old-price"><del>30500 Р.</del></li>
+              <li class="new-price">25500 Р.</li>
             </ul>
           </li>
 
-          <li>
+          <li class="product-card">
             <h3><a href="#">Перфоратор Bosch<br>
               BFG 2000</a></h3>
             <img src="img/bfg-3000-2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 2000">
             <ul class="buy-it">
-              <li><a href="#" class="to-cart">Купить</a></li>
-              <li><a href="#" class="bookmark-it">В закладки</a></li>
+              <li><a class="to-cart" href="#">Купить</a></li>
+              <li><a class="bookmark-it" href="#">В закладки</a></li>
             </ul>
-            <button class="button-price" type="button">12500 Р.</button>
+            <p class="new-price">12500 Р.</p>
           </li>
 
-          <li>
+          <li class="product-card">
             <h3><a href="#">Перфоратор Bosch<br>
               BFG 3000</a></h3>
             <img src="img/bfg-3000-2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 3000">
             <!--в стилях flag-new.png-->
             <ul class="buy-it">
-              <li><a href="#" class="to-cart">Купить</a></li>
-              <li><a href="#" class="bookmark-it">В закладки</a></li>
+              <li><a class="to-cart" href="#">Купить</a></li>
+              <li><a class="bookmark-it" href="#">В закладки</a></li>
             </ul>
             <ul>
-              <li><del>22500 Р.</del></li>
-              <li><button class="button-price" type="button">15500 Р.</button></li>
+              <li class="old-price"><del>22500 Р.</del></li>
+              <li class="new-price">15500 Р.</li>
             </ul>
           </li>
 
-          <li>
+          <li class="product-card">
             <h3><a href="#">Перфоратор Bosch<br>
               BFG 6000</a></h3>
             <img src="img/bfg-6000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 6000">
             <ul class="buy-it">
-              <li><a href="#" class="to-cart">Купить</a></li>
-              <li><a href="#" class="bookmark-it">В закладки</a></li>
+              <li><a class="to-cart" href="#">Купить</a></li>
+              <li><a class="bookmark-it" href="#">В закладки</a></li>
             </ul>
             <ul>
-              <li><del>30500 Р.</del></li>
-              <li><button class="button-price" type="button">25500 Р.</button></li>
+              <li class="old-price"><del>30500 Р.</del></li>
+              <li class="new-price">25500 Р.</li>
             </ul>
           </li>
 
-          <li>
+          <li class="product-card">
             <h3><a href="#">Перфоратор Bosch<br>
               BFG 2000</a></h3>
             <img src="img/bfg-3000-2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 2000">
             <ul class="buy-it">
-              <li><a href="#" class="to-cart">Купить</a></li>
-              <li><a href="#" class="bookmark-it">В закладки</a></li>
+              <li><a class="to-cart" href="#">Купить</a></li>
+              <li><a class="bookmark-it" href="#">В закладки</a></li>
             </ul>
-            <button class="button-price" type="button">12500 Р.</button type="button">
+            <p class="new-price">12500 Р.</p>
           </li>
         </ul>
         </div>
@@ -273,8 +273,8 @@
       <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       <a href="tel:+78125550555">+7 (812) 555-05-55</a>
 
-      <nav aria-label="Навигация по сайту" class="navigation-footer">
-        <ul>
+      <nav aria-label="Навигация по сайту" class="footer-navigation">
+        <ul class="general-footer-navigation">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Каталог</a></li>
