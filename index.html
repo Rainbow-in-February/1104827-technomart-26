@@ -20,9 +20,9 @@
         </form>
 
         <ul class="cart-navigation">
-          <li class="bookmarks bookmarks-full"><a href="#">Закладки: <span>0</span></a></li>
-          <li class="cart cart-full"><a href="#">Корзина: <span>0</span></a></li>
-          <li><a href="#">Оформить заказ</a></li>
+          <li><a class="bookmarks bookmarks-full" href="#">Закладки: <span>0</span></a></li>
+          <li><a class="cart cart-full" href="#">Корзина: <span>0</span></a></li>
+          <li><a class="order" href="#">Оформить заказ</a></li>
         </ul>
       </div>
       <div>
@@ -36,11 +36,11 @@
         </ul>
 
         <ul class="login">
-          <li class="sign-in"><a href="#">Войти</a></li>
-          <li class="sign-up"><a href="#">Регистрация</a></li>
+          <li><a class="sign-in" href="#">Войти</a></li>
+          <li><a class="sign-up" href="#">Регистрация</a></li>
         </ul>
 
-        <nav class="navigation-header">
+        <nav class="header-navigation">
           <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="#">Компания</a></li>
@@ -99,8 +99,8 @@
             </li>
           </ul>
 
-          <a href="#" class="slider-button-left" aria-label="влево" ></a>
-          <a href="#" class="slider-button-right" aria-label="вправо"></a>
+          <a href="#" class="slider-button-left" aria-label="влево">&lt;</a>
+          <a href="#" class="slider-button-right" aria-label="вправо">&gt;</a>
             
           <ul class="slider-pagination-list">
             <li class="slider-pagination-item" aria-label="слайд первый"></li>
@@ -114,7 +114,7 @@
         </div>
 
         <ul class="popular-products-list">
-          <li>
+          <li class="product-card">
             <h3><a href="#">Перфоратор Bosch<br>
             BFG 9000</a></h3>
             <img src="img/bfg-9000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 9000">
@@ -124,12 +124,14 @@
             </ul>
             
             <ul>
-              <li><del>32500 Р.</del></li>
-              <li><button class="button-price" type="button">25500 Р.</button></li>
+              <li class="old-price"><del>32500 Р.</del></li>
+              <li class="new-price">25500 Р.</li>
+<!--ни на макете, где показано поведение элеменотов, ни в ТЗ нет инфы о том, 
+  как должна себя вести цена, поэтому я думаю, это не кнопка, а просто текст с особым фоном-->
             </ul>
           </li>
 
-          <li>
+          <li class="product-card">
             <h3><a href="#">Перфоратор Bosch<br>
             BFG 3000</a></h3>
             <img src="img/bfg-3000-2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 3000">
@@ -139,12 +141,12 @@
             </ul>
             
             <ul>
-              <li><del>22500 Р.</del></li>
-              <li><button class="button-price" type="button">15500 Р.</button></li>
+              <li class="old-price"><del>22500 Р.</del></li>
+              <li class="new-price">15500 Р.</li>
             </ul>
           </li>
 
-          <li>
+          <li class="product-card">
             <h3><a href="#">Перфоратор Bosch<br>
             BFG 6000</a></h3>
             <img src="img/bfg-6000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 6000">
@@ -154,12 +156,12 @@
             </ul>
             
             <ul>
-              <li><del>32500 Р.</del></li>
-              <li><button class="button-price" type="button">25500 Р.</button></li>
+              <li class="old-price"><del>32500 Р.</del></li>
+              <li class="new-price">25500 Р.</li>
             </ul>
           </li>
 
-          <li>
+          <li class="product-card">
             <h3><a href="#">Перфоратор Bosch<br>
             BFG 2000</a></h3>
             <img src="img/bfg-3000-2000.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 2000">
@@ -169,7 +171,7 @@
               <li><a href="#" class="bookmark-it">В закладки</a></li>
             </ul>
             
-            <button class="button-price" type="button">12500 Р.</button>
+            <p class="new-price">12500 Р.</p>
           </li>
         </ul>
 
@@ -249,8 +251,8 @@
       <p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       <a href="tel:+78125550555">+7 (812) 555-05-55</a>
         
-      <nav class="navigation-footer">
-        <ul>
+      <nav class="footer-navigation">
+        <ul class="general-footer-navigation">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="inner.html">Каталог</a></li>
