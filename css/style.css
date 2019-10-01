@@ -2,9 +2,11 @@
 @counter-style dash {}
 */
 
+
+
 html {
     box-sizing: border-box;
-    width: 100%;
+    
 /*
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -17,6 +19,12 @@ body {
     margin: 0;
     margin: 0;
     font-family: "Cuprum", "Bahnschrift Condensed", "Arial Narrow", sans-serif;
+/*    font-size: 17px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #32425c;
+Эти глобальные стили не нужны, потому что по всему сайту кегль разный,
+цвета тоже отличаются для разных групп? */
     background: #fff;
     
 }
@@ -34,6 +42,7 @@ img {
 a {
     text-decoration: none;
     color: #fff;
+/* Лучше избегать такого глобального стиля [цвет]? Особенно учитывая тот факт, что у нас фон белый*/
 }
 
 header {
@@ -43,11 +52,18 @@ header {
 div.header-top {
     display: inline-flex;
     -webkit-display: inline-flex;
+/* Все анлайн-флексы я уберу, уже посмотрела, как надо делать.
+Это я сделала для начала для удобства своего восприятия.
+Ну и это не входит в задание "Базовая стилизация". */
     padding-left: 130px;
     padding-right: 130px;
     margin: 0;
     padding-top: 0;
     height: 42px;
+/* Это неверно, что я задала высоту здесь? 
+Если делаю min-height, то синий фон вылезает ниже кнопок 
+и почти сравнивается с тенью лого. Позже посмотрю как это пофиксить, 
+чтобы можно было задать не строгую высоту*/
     background-color: #293449;
     
     font-size: 17px;
@@ -83,11 +99,9 @@ a.header-logo img:active {
     width: 300px;
     height: 100%;
     padding-left: 50px;
-    font-family: "Cuprum", "Arial Narrow", sans-serif;
-    font-size: 17px;
-    line-height: 18px;
-    color: #000;
-    background-color: #293449;
+    font: inherit;
+    color: #fff;
+    background-color: transparent;
     border: none;
 }
 
@@ -108,26 +122,38 @@ a.header-logo img:active {
     background-repeat: no-repeat;
     background-size: 17px;
     background-position: 16px center;
-    /* как задать цвет иконки? */
+    /* как задать цвет и прозрачность иконке? */
 }
 
 ul.cart-navigation {
     list-style: none;
     display: inline-flex;
-    -webkit-display: inline-flex;
-    margin-top: 0;
+    -webkit-display: inline-flex; 
+    margin-top: 11px;
     margin-bottom: 0;
     
 }
 
-.cart-navigation li {
-    width: 150px;
+.bookmarks,
+.cart,
+.order {
+/*    width: 150px;
+    height: 42px;
+    
+*/
+    margin-top: 11px;
     padding-top: 11px;
+    padding-bottom: 13px;
+    padding-left: 40px;
+    padding-right: 22px;
     text-align: center;
+    color: #fff;
 }
 
-.cart-navigation li:last-child {
+.order {
+    
     background: #63a63e;
+    padding-left: 22px;
 }
 
 .bookmarks:active,
@@ -139,11 +165,11 @@ ul.cart-navigation {
     color: #8b8e94;
 }
 
-.cart-navigation li:last-child:hover {
+.order:hover {
     background-color: #5fbb2d;
 }
 
-.cart-navigation li:last-child:active {
+.order:active {
     background-color: #518534;
 }
 
@@ -154,7 +180,8 @@ ul.cart-navigation {
     background-repeat: no-repeat;
     background-size: 14px;
     background-position: 17px center;
-    как задать цвет иконки?
+    как задать цвет и прозрачность иконке?
+   
 }
 
 .cart::before {
@@ -163,7 +190,7 @@ ul.cart-navigation {
     background-repeat: no-repeat;
     background-size: 15px;
     background-position: 17px center;
-    как задать цвет иконки?
+    как задать цвет иконке?
 }
 */
 
@@ -214,16 +241,27 @@ ul.header-contacts {
 }
 
 .login li {
-    background-color: #fff;
+    min-height: 45px;
+/* NB не рекомендуется задавать высоту и ширину одновременно, 
+так как может привести к проблеме переполнения контентом*/
+    width: 123px;
     margin: 10px;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    vertical-align: middle;
-    text-align: center;
 }
 
-.sign-in {
-    width: 123px;
+.login li:nth-child(2) {
+    width: 150px;
+}
+
+.login a,
+.user {
+    background-color: #fff;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    padding-left: 48px;
+    padding-right: 26px;
+    vertical-align: middle;
+    text-align: center;
+    color: #000;
 }
 
 .sign-in a::before {
@@ -234,18 +272,9 @@ ul.header-contacts {
     background-position: 17px center;
 }
 
-.sign-up {
-    width: 150px;
-}
-
-.login a,
-.user a {
-    color: #000;
-}
-
 .login a:hover,
-.my-orders a:hover,
-.my-profile a:hover {
+.my-orders:hover,
+.my-profile:hover {
     color: #ee3643;
 }
 
@@ -257,6 +286,11 @@ ul.header-contacts {
 /* rules for profile-navigation*/
 ul.profile-navigation {
     list-style: none;
+}
+
+.profile-navigation li {
+    margin-top: 10px;
+    margin-left: 18px;
 }
 
 .user {
@@ -277,7 +311,7 @@ ul.profile-navigation {
     background-position: 13px center;
 } */
 
-.log-out a {
+.log-out {
     background-color: #fff;
     background-image: url("img/icon-logout.svg");
     background-repeat: no-repeat;
@@ -285,15 +319,15 @@ ul.profile-navigation {
     background-position: 12px center;
 }
 
-.my-orders a,
-.my-profile a {
+.my-orders,
+.my-profile {
     font-size: 16px;
     line-height: 18px;
     color: #32425c;
     text-decoration: underline;
 }
 
-.navigation-header ul {
+.header-navigation ul {
     display: inline-flex;
     -webkit-display: inline-flex;
     width: 940px;
@@ -303,27 +337,28 @@ ul.profile-navigation {
     margin-bottom: 60px;
 }
 
-.navigation-header li {
+.header-navigation li {
     padding-top: 22px;
     padding-bottom: 18px;
     padding-left: 30px;
     padding-right: 30px;
 }
 
-.navigation-header li:hover {
+.header-navigation li:hover {
     background-color: #293449;
 }
 
-.navigation-header li:active {
+.header-navigation li:active {
     background-color: #1d2739;
 }
 
-.navigation-header a {
+.header-navigation a {
     font-size: 17px;
     line-height: 17px;
+    color: #fff;
 }
 
-.navigation-header a:active {
+.header-navigation a:active {
     color: #a1a4a8;
 }
 
@@ -361,12 +396,12 @@ h1.catalog-group {
 /*
 aside {
     max-width: 220px;
-    float: left;
     margin-right: 20px;
 }
 */
 .filter, 
-.sort-by h2 {
+.sort-by h2,
+.sort-by {
     font-size: 13px;
     line-height: 18px;
     font-weight: normal;
@@ -446,6 +481,58 @@ output {
     margin-top: 70px;
 }
 
+
+a[class^="by-"] {
+    color: #b2b2b2;
+    border-bottom: 1px dotted #ee3643;
+}
+
+
+a[class^="by-"]:hover {
+    color: #000;
+    border-bottom: 1px solid #ee3643;
+}
+
+/*индикатор активности: пока не знаю, какой селектор нужен*/
+a[class^="by-"]:active {
+    color: #ee3643;
+    border: none;
+}
+
+.button-sort-lt {
+    font-size: 0px;
+    line-height: 0%;
+    width: 0px;
+    border-bottom: 12px solid #c5c5c5;
+    border-left: 6px solid #f7f3ec;
+    border-right: 6px solid #f7f3ec;
+}
+
+.button-sort-gt {
+    font-size: 0px;
+    line-height: 0%;
+    width: 0px;
+    border-top: 12px solid #c5c5c5;
+    border-left: 6px solid #f7f3ec;
+    border-right: 6px solid #f7f3ec;
+}
+
+.button-sort-lt:hover {
+    border-bottom: 12px solid #000;
+}
+
+.button-sort-gt:hover {
+    border-top: 12px solid #000;
+}
+/*индикатор активности: пока не знаю, какой селектор нужен*/
+.button-sort-lt:active {
+    border-bottom: 12px solid #ee3643;
+}
+
+.button-sort-gt:active {
+    border-top: 12px solid #ee3643;
+}
+
 a.button,
 a.to-cart,
 a.bookmark-it {
@@ -459,7 +546,7 @@ a.button {
     background-color: #ee3643;
     border: 1px solid #ee3643;
     border-radius: 3px;
-    
+    color: #fff;
 }
 
 a.button:hover {
@@ -471,19 +558,143 @@ a.button:active {
 }
 
 a.to-cart {
+    color: #fff;
     background-color: #63a63e;
+    border-bottom: 3px solid #367315;
+    border-radius: 3px;
+    padding-left: 49px;
+    padding-right: 45px;
+    padding-top: 14px;
+    padding-bottom: 11px;
+    
+/* button size 135px x 35px + 3px bottom border 
+??? word is 10px high, though the font size is 14px*/
+}
+
+a.to-cart:hover {
+    background: #5fbb2d;
+}
+
+/* icon for add-to-cart button + it changes colour/opacity*/
+
+a.to-cart:active {
+    background-color: #518534;
+    border-bottom: 3px solid #518534;
 }
 
 a.bookmark-it {
     color: #32425c;
     background-color: #fff;
-    border: 2px solid #63a63e;
+    border: 3px solid #63a63e;
+    border-radius: 3px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 33px;
+    padding-right: 29px;
+}
+
+a.bookmark-it:hover {
+    border: 3px solid #32425c;
+    /*если меняется только цвет рамки, можем ли мы в этом 
+    свойстве указать только цвет (border-color) или важно полностью?*/
+}
+
+a.bookmark-it:active {
+    border-color: #c1c6ce;
+    color: #c1c6ce;
+}
+
+.buy-it li {
+    margin-bottom: 30px;
 }
 
 /*
 a.popular-brands,
 a.popular-products {
     
+}
+*/
+.sort-by ul,
+ul.search-results,
+ul.popular-products-list,
+.product-card ul {
+    list-style: none;
+
+/* себе: посмотреть с какими списками можно объединить правило 
+отсуствия маркировки*/
+}
+
+.product-card {
+    border: 1px solid #c5c5c5;
+    width: 220px;
+    margin-top: 21px;
+    padding-top: 44px;
+    padding-bottom: 21px;
+}
+
+/* так не работает
+.product-card:hover {
+    box-shadow: 0px -14px 10x #ededef,
+                -23px 0px 10px #cdd0d5,
+                33px 0px 5px #a9aeb6,
+                0px 23px 10px #ccced3;
+}
+*/
+
+.product-card h3 a,
+.product-card h3 {
+    font-family: "PT Sans", "Arial Narrow", sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+}
+
+.product-card ul {
+    padding-left: 5px;
+    /*временно, чтобы отлепить от стенки*/
+}
+
+.old-price,
+.new-price {
+    font-family: "PT Sans", "Arial Narrow", sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 700;
+    margin-top: 14px;
+    text-align: center;
+}
+
+.old-price {
+    color: #a9a9a9;
+}
+
+.new-price {
+    color: #fff;
+    background-color: #ee3643;
+    padding-top: 12px;
+    padding-bottom: 11px;
+    padding-left: 38px;
+    padding-right: 16px;
+    border: 1px solid #ee3643;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+/* 122-124px прямоугольник + 18-19 треугольная часть
+сняла в макете паддинги новой цены, но почему-то в браузере они выглядят гораздо больше*/
+    width: 70px;
+}
+
+/* Как делать треугольник в правой части обводки цены?
+Подумать, как поместить его за границу рамки цены, сейчас вставляется сразу после текст цены 
+.new-price::after {
+    content: "";
+    font-size: 0px;
+    line-height: 0%;
+    width: 0px;
+    border-top: 20px solid #fff;
+    border-left: 19px solid #ee3643;
+    border-bottom: 20px solid #fff;
 }
 */
 
@@ -596,10 +807,14 @@ p.footer-contacts + a {
     margin-top: 0;
 }
 
-.navigation-footer ul {
+.footer-navigation ul {
     list-style: none;
     float: right;
     padding-left: 59px;
+}
+
+.general-footer-navigation a {
+    color: #fff;
 }
 
 .footer-categories a,
@@ -608,13 +823,13 @@ p.footer-contacts + a {
     color: #ffd180;
 }
 
-.navigation-footer a:hover,
+.footer-navigation a:hover,
 .email a:hover,
 .webdeveloper a:hover {
     text-decoration: underline;
 }
 
-.navigation-footer a:active {
+.footer-navigation a:active {
     color: #a4abb4;
     text-decoration: none;
 }
