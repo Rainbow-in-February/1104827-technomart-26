@@ -2,7 +2,11 @@
 @counter-style dash {}
 */
 
-
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 html {
     box-sizing: border-box;
@@ -17,14 +21,7 @@ html {
 
 body {
     margin: 0;
-    margin: 0;
-    font-family: "Cuprum", "Bahnschrift Condensed", "Arial Narrow", sans-serif;
-/*    font-size: 17px;
-    line-height: 24px;
-    font-weight: normal;
-    color: #32425c;
-Эти глобальные стили не нужны, потому что по всему сайту кегль разный,
-цвета тоже отличаются для разных групп? */
+    font-family: "Cuprum", "Arial", sans-serif;
     background: #fff;
     
 }
@@ -41,37 +38,27 @@ img {
 
 a {
     text-decoration: none;
-    color: #fff;
-/* Лучше избегать такого глобального стиля [цвет]? Особенно учитывая тот факт, что у нас фон белый*/
 }
 
 header {
     background-color: #f4f7f9;
 }
 
-div.header-top {
-    display: inline-flex;
-    -webkit-display: inline-flex;
-/* Все анлайн-флексы я уберу, уже посмотрела, как надо делать.
-Это я сделала для начала для удобства своего восприятия.
-Ну и это не входит в задание "Базовая стилизация". */
+.header-top {
     padding-left: 130px;
     padding-right: 130px;
     margin: 0;
     padding-top: 0;
-    height: 42px;
-/* Это неверно, что я задала высоту здесь? 
-Если делаю min-height, то синий фон вылезает ниже кнопок 
-и почти сравнивается с тенью лого. Позже посмотрю как это пофиксить, 
-чтобы можно было задать не строгую высоту*/
+/* height 42px*/
     background-color: #293449;
-    
     font-size: 17px;
     line-height: 18px;
     color: #fff;
 }
 
-a.header-logo img {
+.header-logo img {
+    box-sizing: content-box;
+/*Почему-то исчезли лого вверху и внизу. Решила попробовать сменить значение бокс-сайзинга, и картинка вернулась. Так и должно быть или я придумала костыль?*/
     padding-top: 11px;
     padding-bottom: 11px;
     padding-left: 55px;
@@ -84,20 +71,21 @@ a.header-logo img {
  надо прописывать отсутствие изменений?
 }*/
 
-a.header-logo img:hover {
+.header-logo img:hover {
     background-color: #ca2c37;
     box-shadow: 0px 5px #9a212a;
 }
 
-a.header-logo img:active {
+.header-logo img:active {
     background-color: #ba2732;
     box-shadow: 0px 5px #8e1e26;
 }
 
 
 .header-top input {
-    width: 300px;
-    height: 100%;
+/*    width: 300px;
+    height: 100%; */
+    margin-top: 11px; /*temporary*/
     padding-left: 50px;
     font: inherit;
     color: #fff;
@@ -125,21 +113,32 @@ a.header-logo img:active {
     /* как задать цвет и прозрачность иконке? */
 }
 
-ul.cart-navigation {
-    list-style: none;
-    display: inline-flex;
-    -webkit-display: inline-flex; 
-    margin-top: 11px;
-    margin-bottom: 0;
+input[type="search"]::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+input[type="search"]:-ms-input-placeholder,
+input[type="search"]::-ms-input-placeholder {
+    color: #fff;
+}
+
+.cart-navigation {
+    list-style: none; 
+    margin-top: 11px; 
     
+}
+
+.cart-navigation li { 
+    margin-top: 30px; 
+    /* временно пока нет сетки */
 }
 
 .bookmarks,
 .cart,
 .order {
 /*    width: 150px;
-    height: 42px;
-    
+    height: 42px; 
 */
     margin-top: 11px;
     padding-top: 11px;
@@ -194,7 +193,7 @@ ul.cart-navigation {
 }
 */
 
-header div {    
+.header-part2 {    
     padding-top: 46px;
 }
 
@@ -207,9 +206,9 @@ header div {
     padding-left: 51px;
 }
 
-ul.header-contacts {
+.header-contacts {
     list-style: none;
-    width: 271px;
+    
 }
 
 .header-contacts a {
@@ -230,7 +229,7 @@ ul.header-contacts {
     font-size: 14px;
     line-height: 24px;
     color: #32425c;
-    text-align: center;
+/*    text-align: center; */
     margin-top: 15px;
 }
 
@@ -284,7 +283,7 @@ ul.header-contacts {
 }
 
 /* rules for profile-navigation*/
-ul.profile-navigation {
+.profile-navigation {
     list-style: none;
 }
 
@@ -327,13 +326,17 @@ ul.profile-navigation {
     text-decoration: underline;
 }
 
+.profile-navigation li:nth-last-of-type(3),
+.profile-navigation li:nth-last-of-type(4) {
+    margin-top: 20px;
+}
+
 .header-navigation ul {
-    display: inline-flex;
-    -webkit-display: inline-flex;
     width: 940px;
     list-style: none;
     background-color: #32425c;
     box-shadow: 0px 5px #293449;
+    margin: 0 auto;
     margin-bottom: 60px;
 }
 
@@ -381,7 +384,7 @@ section.suggestions {
     background-image: url("img/icon-home.svg");
 }
 
-h1.catalog-group {
+.catalog-group {
     font-family: "Cuprum";
     font-size: 30px;
     line-height: 30px;
@@ -391,6 +394,7 @@ h1.catalog-group {
     padding-left: 30px;
     padding-top: 32px;
     padding-bottom: 32px;
+    margin: 0 auto;
 }
 
 /*
@@ -413,7 +417,7 @@ aside {
     padding-left: 19px;
 }
 
-h2.filter {
+.filter {
     max-width: 220px;
 } 
 
@@ -533,31 +537,32 @@ a[class^="by-"]:active {
     border-top: 12px solid #ee3643;
 }
 
-a.button,
-a.to-cart,
-a.bookmark-it {
+.button,
+.to-cart,
+.bookmark-it {
+    font-family: "Cuprum";
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
     
 }
 
-a.button {
+.button {
     background-color: #ee3643;
     border: 1px solid #ee3643;
     border-radius: 3px;
     color: #fff;
 }
 
-a.button:hover {
+.button:hover {
     background-color: #ca2c37;
 }
 
-a.button:active {
+.button:active {
     background-color: #ba2732;
 }
 
-a.to-cart {
+.to-cart {
     color: #fff;
     background-color: #63a63e;
     border-bottom: 3px solid #367315;
@@ -566,23 +571,22 @@ a.to-cart {
     padding-right: 45px;
     padding-top: 14px;
     padding-bottom: 11px;
-    
 /* button size 135px x 35px + 3px bottom border 
 ??? word is 10px high, though the font size is 14px*/
 }
 
-a.to-cart:hover {
+.to-cart:hover {
     background: #5fbb2d;
 }
 
 /* icon for add-to-cart button + it changes colour/opacity*/
 
-a.to-cart:active {
+.to-cart:active {
     background-color: #518534;
     border-bottom: 3px solid #518534;
 }
 
-a.bookmark-it {
+.bookmark-it {
     color: #32425c;
     background-color: #fff;
     border: 3px solid #63a63e;
@@ -593,13 +597,13 @@ a.bookmark-it {
     padding-right: 29px;
 }
 
-a.bookmark-it:hover {
+.bookmark-it:hover {
     border: 3px solid #32425c;
     /*если меняется только цвет рамки, можем ли мы в этом 
     свойстве указать только цвет (border-color) или важно полностью?*/
 }
 
-a.bookmark-it:active {
+.bookmark-it:active {
     border-color: #c1c6ce;
     color: #c1c6ce;
 }
@@ -609,14 +613,14 @@ a.bookmark-it:active {
 }
 
 /*
-a.popular-brands,
-a.popular-products {
+.popular-brands,
+.popular-products {
     
 }
 */
 .sort-by ul,
-ul.search-results,
-ul.popular-products-list,
+.search-results,
+.popular-products-list,
 .product-card ul {
     list-style: none;
 
@@ -652,8 +656,7 @@ ul.popular-products-list,
 }
 
 .product-card ul {
-    padding-left: 5px;
-    /*временно, чтобы отлепить от стенки*/
+    margin: 0 auto;
 }
 
 .old-price,
@@ -663,12 +666,14 @@ ul.popular-products-list,
     line-height: 18px;
     font-weight: 700;
     margin-top: 14px;
-    text-align: center;
+    
 }
 
 .old-price {
     color: #a9a9a9;
+    text-align: center;
 }
+/*у старой цены выравнивание по центру идёт от какого-то отступа. Я так понимаю, это отступ списка, в котором он находится, который определили через .product-card ul {margin: 0 auto} */
 
 .new-price {
     color: #fff;
@@ -680,9 +685,15 @@ ul.popular-products-list,
     border: 1px solid #ee3643;
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
+    margin: 0 auto;
 /* 122-124px прямоугольник + 18-19 треугольная часть
 сняла в макете паддинги новой цены, но почему-то в браузере они выглядят гораздо больше*/
-    width: 70px;
+}
+
+
+p.new-price {
+    min-width: 124px;
+    margin-left: 43px;
 }
 
 /* Как делать треугольник в правой части обводки цены?
@@ -767,7 +778,8 @@ footer {
    background-color: #293449;
 }
 
-img.footer-logo {
+.footer-logo {
+    box-sizing: content-box;
     padding-top: 21px;
     padding-bottom: 21px;
     padding-left: 37px;
@@ -776,31 +788,31 @@ img.footer-logo {
     box-shadow: 0px 5px #b52933; 
 }
 
-p.footer-contacts {
+.footer-contacts {
     margin-top: 30px;
     margin-bottom: 0px;
 }
 
-p.copyright {
+.copyright {
     margin-top: 90px;
     margin-bottom: 0px;
 }
 
-p.copyright + p {
+.copyright + p {
     margin-top: 0px;
 }
 
-p.copyright,
-p.copyright + p,
-p.webdeveloper,
-p.email,
-p.webdeveloper a,
-p.email a {
+.copyright,
+.copyright + p,
+.webdeveloper,
+.email,
+.webdeveloper a,
+.email a {
     font-size: 16px;
     line-height: 18px;
 }
 
-p.footer-contacts + a {
+.footer-contacts + a {
     color: #fff;
     font-size: 18px;
     line-height: 24px;
@@ -850,13 +862,18 @@ p.footer-contacts + a {
 }
 
 .social-button {
+    
     background-color: #212a3a;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
     border: 1px solid #212a3a;
     border-radius: 50%;
 }
 
-a.social-button:hover,
-a.social-button:active {
+.social-button:hover,
+.social-button:active {
     background-color: #ee3643;
     border: 1px solid #ee3643;
 }
