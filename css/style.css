@@ -106,10 +106,15 @@ header {
 
 .header-top input::before {
     content: "";
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    height: 100%;
+    width: 17px;
     background-image: url("img/icon-search.svg");
     background-repeat: no-repeat;
-    background-size: 17px;
-    background-position: 16px center;
+    background-size: 17px auto;
+    background-position: left center;
     /* как задать цвет и прозрачность иконке? */
 }
 
@@ -365,6 +370,158 @@ input[type="search"]::-ms-input-placeholder {
     color: #a1a4a8;
 }
 
+/* INDEX PAGE PROMO + SLIDERS*/
+main {
+    padding-top: 60px;
+}
+
+.category {
+    margin-bottom: 20px;
+    
+}
+.category h2 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 0;
+}
+
+.materials,
+.tools,
+.machines,
+.discounts,
+.delivery {
+/*    min-width: 300px; */
+    padding-left: 23px;
+    padding-top: 26px;
+    padding-bottom: 32px;
+}
+
+.materials {
+    background-color: #ffbf47;
+/*
+    background-image: url(img/icon-paint.svg) no-repeat;
+    background-position: top 33px right 42px;
+    background-size: 44px 65px;
+*/
+}
+ 
+
+.tools {
+    background-color: #3bbce3;
+}
+
+.machines {
+    background-color: #dc91d8;
+}
+
+.discounts {
+    background-color: #8ed78f;
+}
+
+.delivery {
+    background-color: #ffc047;
+}
+
+.category a {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 10%);
+    min-width: 133px;
+    margin: 0 auto; 
+}
+/* btn size 135x38*/
+
+.category a:hover {
+    background-color: rgba(0, 0, 0, 20%);
+}
+
+.category a:active {
+    background-color: rgba(0, 0, 0, 30%);
+}
+
+/* Подключить декор. картинки в промо-блоки*/
+
+.slider1 {
+    background-color: #685c53;
+    background-image: url("img/hammer-drill.jpg");
+    background-repeat: no-repeat;
+    background-size: 620px 268px;
+    padding-top: 25px;
+    padding-bottom: 34px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.slider2 {
+    background-color: #685c53;
+    background-image: url("img/drill.jpg");
+    background-repeat: no-repeat;
+    background-size: 620px 268px;
+    padding-top: 25px;
+    padding-bottom: 34px;
+    padding-left: 25px;
+}
+
+.slides h2 {
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.slides p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    margin-top: 0;
+}
+
+.open {
+    min-width: 195px;
+}
+
+/* INDEX POPULAR PRODUCTS AND BRANDS*/
+.heading-popular {
+    background-color: #f9f5f0;
+    padding-top: 30px;
+    padding-right: 24px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+
+}
+
+.heading-popular h2 {
+    margin-top: 0;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #32425c;
+}
+
+.popular-brands,
+.popular-products {
+    min-width: 253px;
+}
+
+.popular-brands-list li {
+    width: 218px;
+    height: 143px;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+}
+/*изменить правила, чтобы вся карточка была ссылкой*/
+.popular-brands-list a {
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* INNER PAGE*/
+
 .breadcrumbs {
     margin-top: 20px;
     list-style: none;
@@ -396,6 +553,8 @@ section.suggestions {
     padding-bottom: 32px;
     margin: 0 auto;
 }
+
+/* FILTERS */
 
 /*
 aside {
@@ -478,7 +637,7 @@ output {
     line-height: 18px;
     text-transform: uppercase;
     background-color: #fff;
-    border: 1px solid #c5c5c5;
+    border: 1px solid #e5e5e5;
     border-radius: 3px;
     width: 140px;
     padding: 5px 38px;
@@ -537,6 +696,8 @@ a[class^="by-"]:active {
     border-top: 12px solid #ee3643;
 }
 
+/* PRODUCT CARDS and THEIR BUTTONS + regular crimson buttons*/
+
 .button,
 .to-cart,
 .bookmark-it {
@@ -549,9 +710,11 @@ a[class^="by-"]:active {
 
 .button {
     background-color: #ee3643;
-    border: 1px solid #ee3643;
+    border: 1px solid transparent;
     border-radius: 3px;
     color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .button:hover {
@@ -618,6 +781,10 @@ a[class^="by-"]:active {
     
 }
 */
+
+.popular-brands-list,
+.slides ul,
+.categories-table,
 .sort-by ul,
 .search-results,
 .popular-products-list,
@@ -629,7 +796,7 @@ a[class^="by-"]:active {
 }
 
 .product-card {
-    border: 1px solid #c5c5c5;
+    border: 1px solid #e5e5e5;
     width: 220px;
     margin-top: 21px;
     padding-top: 44px;
@@ -670,7 +837,7 @@ a[class^="by-"]:active {
 }
 
 .old-price {
-    color: #a9a9a9;
+    color: #999999;
     text-align: center;
 }
 /*у старой цены выравнивание по центру идёт от какого-то отступа. Я так понимаю, это отступ списка, в котором он находится, который определили через .product-card ul {margin: 0 auto} */
@@ -708,6 +875,8 @@ p.new-price {
     border-bottom: 20px solid #fff;
 }
 */
+
+/*INDEX PAGE about us */
 
 .write-us,
 .about-us {
@@ -763,6 +932,8 @@ p.new-price {
 .small-map {
     margin-top: 35px;
 }
+
+/* FOOTER */
 
 footer {
     
@@ -847,7 +1018,7 @@ footer {
 }
 
 .footer-categories a:active {
-    color: #ad956f;
+    color: #a6906e;
     text-decoration: none;
 }
 
