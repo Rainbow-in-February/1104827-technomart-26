@@ -377,7 +377,7 @@ input[type="search"]::-ms-input-placeholder {
 /* INDEX PAGE PROMO + SLIDERS*/
 main {
     padding-top: 60px;
-    padding-bottom: 86px;
+/*    padding-bottom: 86px; влияет на внутр.страницу: после голубого блока появился отступ*/
 }
 
 .index-promo {
@@ -682,9 +682,8 @@ main {
     padding-bottom: 86px;
 }
 
-
-
-.index-about-us h2 {
+.index-about-us h2,
+.tool-group-description h2 {
     font-size: 30px;
     line-height: 30px;
     font-weight: normal;
@@ -692,12 +691,13 @@ main {
     text-transform: uppercase;
 }
 
-.index-about-us p {
+.index-about-us p,
+.tool-group-description p {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 24px;
     color: #000;
-    max-width: 520px;
+/*    max-width: 520px; for index-about-us block*/
     margin-top: 28px;
 }
 
@@ -996,12 +996,12 @@ a[class^="by-"]:active {
 }
 */
 
-.popular-brands-list,
-.slides ul,
 .categories-table,
+.slides ul,
 .sort-by ul,
 .search-results,
 .popular-products-list,
+.popular-brands-list,
 .product-card ul {
     list-style: none;
 
@@ -1009,11 +1009,11 @@ a[class^="by-"]:active {
 отсуствия маркировки*/
 }
 
-.popular-brands-list,
-.slides ul,
 .categories-table,
+.slides ul,
 .sort-by ul,
 .search-results,
+.popular-brands-list,
 .popular-products-list {
     padding-left: 0;
 }
@@ -1100,6 +1100,18 @@ p.new-price {
     left: 20px;
 }
 
+.description-wrap {
+    background-color: #f2f6f8;
+    padding-top: 65px;
+    padding-bottom: 70px;
+}
+
+.tool-group-description {
+    width: 940px;
+    margin: 0 auto;
+}
+
+/*text properties for group description are combined with those of index-about-us in one rule set*/
 
 /* FOOTER */
 
