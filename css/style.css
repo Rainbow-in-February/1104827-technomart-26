@@ -375,10 +375,6 @@ main {
     padding-top: 60px;
 }
 
-.category {
-    margin-bottom: 20px;
-    
-}
 .category h2 {
     font-size: 24px;
     line-height: 30px;
@@ -396,32 +392,65 @@ main {
     padding-left: 23px;
     padding-top: 26px;
     padding-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .materials {
     background-color: #ffbf47;
-/*
-    background-image: url(img/icon-paint.svg) no-repeat;
-    background-position: top 33px right 42px;
+    background-image: url("../img/icon-paint.svg");
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
     background-size: 44px 65px;
-*/
+    
 }
  
 
 .tools {
     background-color: #3bbce3;
+    background-image: url("../img/icon-tools.svg");
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+    background-size: 75px 61px;
 }
+
+/*
+.tools::after {
+    content: "";
+    font-size: 0px;
+    width: 142px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    background-color: #3bbce3;
+    background-image: url("../img/icon-tools.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 75px 61px;  
+}
+*/
 
 .machines {
     background-color: #dc91d8;
+    background-image: url("../img/icon-machinery.svg");
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+    background-size: 78px 62px;
 }
 
 .discounts {
     background-color: #8ed78f;
+    background-image: url("../img/icon-discount.svg");
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+    background-size: 59px 72px;
 }
 
 .delivery {
     background-color: #ffc047;
+    background-image: url("../img/icon-delivery.svg");
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+    background-size: 78px 63px;
 }
 
 .category a {
@@ -444,9 +473,10 @@ main {
 
 .slider1 {
     background-color: #685c53;
-    background-image: url("img/hammer-drill.jpg");
+    background-image: url("../img/hammer-drill.jpg");
     background-repeat: no-repeat;
     background-size: 620px 268px;
+    background-position: contain;
     padding-top: 25px;
     padding-bottom: 34px;
     padding-left: 25px;
@@ -455,9 +485,10 @@ main {
 
 .slider2 {
     background-color: #685c53;
-    background-image: url("img/drill.jpg");
+    background-image: url("../img/drill.jpg");
     background-repeat: no-repeat;
     background-size: 620px 268px;
+    background-position: 50% 50%;
     padding-top: 25px;
     padding-bottom: 34px;
     padding-left: 25px;
@@ -483,6 +514,64 @@ main {
     min-width: 195px;
 }
 
+.slider-button-left::before,
+.slider-button-right::before {
+    content: "";
+    font-size: 0px;
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    border-left: 5px solid #ee3643;
+    border-bottom: 5px solid #ee3643; /*make it white crimson is a temporary solution*/;
+    
+}
+
+.slider-button-left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform-origin: 50% 50%;
+}
+
+.slider-button-right {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform-origin: 50% 50%;
+}
+
+.slider-pagination-list {
+    list-style: none;
+}
+.slider-pagination-list li {
+    display: inline;
+}
+.slider-pagination-list li:first-of-type::before {
+    content: "";
+    font-size: 0px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border: 1px solid #ee3643; /*temporary: to make it visible on the white background*/
+    border-radius: 50%;
+    background-color: #fff;
+   }
+
+.slider-pagination-current::after {
+    content: "";
+    font-size: 0px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: #ee3643;
+    background-size: cover;
+}
+
 /* INDEX POPULAR PRODUCTS AND BRANDS*/
 .heading-popular {
     background-color: #f9f5f0;
@@ -506,8 +595,13 @@ main {
 .popular-products {
     min-width: 253px;
 }
+/*
+.popular-brands-list {
 
+}
+*/
 .popular-brands-list li {
+
     width: 218px;
     height: 143px;
     border: 1px solid #e5e5e5;
@@ -518,6 +612,13 @@ main {
     vertical-align: middle;
     text-align: center;
     margin: 0 auto;
+}
+
+.popular-brands-list img {
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #e5e5e5;
 }
 
 /* INNER PAGE*/
@@ -732,8 +833,8 @@ a[class^="by-"]:active {
     border-radius: 3px;
     padding-left: 49px;
     padding-right: 45px;
-    padding-top: 14px;
-    padding-bottom: 11px;
+    padding-top: 11px;
+    padding-bottom: 8px;
 /* button size 135px x 35px + 3px bottom border 
 ??? word is 10px high, though the font size is 14px*/
 }
@@ -754,8 +855,8 @@ a[class^="by-"]:active {
     background-color: #fff;
     border: 3px solid #63a63e;
     border-radius: 3px;
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding-top: 9px;
+    padding-bottom: 9px;
     padding-left: 33px;
     padding-right: 29px;
 }
@@ -801,6 +902,7 @@ a[class^="by-"]:active {
     margin-top: 21px;
     padding-top: 44px;
     padding-bottom: 21px;
+    overflow: hidden;
 }
 
 /* так не работает
@@ -845,26 +947,24 @@ a[class^="by-"]:active {
 .new-price {
     color: #fff;
     background-color: #ee3643;
-    padding-top: 12px;
-    padding-bottom: 11px;
-    padding-left: 38px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 35px;
     padding-right: 16px;
-    border: 1px solid #ee3643;
+    border: 1px solid transparent;
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
     margin: 0 auto;
-/* 122-124px прямоугольник + 18-19 треугольная часть
+/* 122px прямоугольник + 18-19 треугольная часть
 сняла в макете паддинги новой цены, но почему-то в браузере они выглядят гораздо больше*/
 }
 
 
 p.new-price {
-    min-width: 124px;
+    
     margin-left: 43px;
 }
 
-/* Как делать треугольник в правой части обводки цены?
-Подумать, как поместить его за границу рамки цены, сейчас вставляется сразу после текст цены 
 .new-price::after {
     content: "";
     font-size: 0px;
@@ -873,8 +973,11 @@ p.new-price {
     border-top: 20px solid #fff;
     border-left: 19px solid #ee3643;
     border-bottom: 20px solid #fff;
+    position: relative;
+    top: -6px;
+    left: 20px;
 }
-*/
+
 
 /*INDEX PAGE about us */
 
@@ -1032,13 +1135,17 @@ footer {
     list-style: none;
 }
 
+.footer-social li {
+    display: inline;
+}
+
 .social-button {
-    
+    font-size: 0px;
     background-color: #212a3a;
-    padding-top: 10px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    padding-left: 20px;
+    padding-top: 21px;
+    padding-right: 21px;
+    padding-bottom: 21px;
+    padding-left: 21px;
     border: 1px solid #212a3a;
     border-radius: 50%;
 }
