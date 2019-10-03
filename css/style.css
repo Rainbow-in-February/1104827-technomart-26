@@ -26,12 +26,6 @@ body {
     
 }
 
-main,
-header div:not(.header-top) {
-    margin-left: 130px;
-    margin-right: 130px;
-}
-
 img {
     max-width: 100%;
 }
@@ -42,18 +36,20 @@ a {
 
 header {
     background-color: #f4f7f9;
+    padding-bottom: 60px;
 }
 
-.header-top {
-    padding-left: 130px;
-    padding-right: 130px;
-    margin: 0;
-    padding-top: 0;
+.header-top-wrap {
 /* height 42px*/
     background-color: #293449;
     font-size: 17px;
     line-height: 18px;
     color: #fff;
+}
+
+.header-top-container {
+    width: 940px;
+    margin: 0 auto;
 }
 
 .header-logo img {
@@ -82,39 +78,40 @@ header {
 }
 
 
-.header-top input {
+.header-top-container input {
 /*    width: 300px;
     height: 100%; */
     margin-top: 11px; /*temporary*/
-    padding-left: 50px;
+    padding-left: 49px;
     font: inherit;
     color: #fff;
     background-color: transparent;
     border: none;
 }
 
-.header-top input:hover,
+.header-top-container input:hover,
 .bookmarks:hover,
 .cart:hover {
     background-color: #212a3a;
 }
 
-.header-top input:focus {
+.header-top-container input:focus {
     color: #000;
     background-color: #fff;
 }
 
-.header-top input::before {
+.header-top-container input::before {
     content: "";
-    position: absolute;
+/*    position: absolute;
     top: 12px;
     left: 20px;
     height: 100%;
     width: 17px;
-    background-image: url("img/icon-search.svg");
+*/    background-image: url("../img/icon-search.svg");
     background-repeat: no-repeat;
-    background-size: 17px auto;
+    background-size: 17px 17px;
     background-position: left center;
+    outline: 1px solid red;
     /* как задать цвет и прозрачность иконке? */
 }
 
@@ -130,12 +127,15 @@ input[type="search"]::-ms-input-placeholder {
 
 .cart-navigation {
     list-style: none; 
+    
+    padding-left: 0;
     margin-top: 11px; 
     
 }
 
 .cart-navigation li { 
     margin-top: 30px; 
+    
     /* временно пока нет сетки */
 }
 
@@ -200,6 +200,8 @@ input[type="search"]::-ms-input-placeholder {
 
 .header-part2 {    
     padding-top: 46px;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .site-description {
@@ -213,7 +215,7 @@ input[type="search"]::-ms-input-placeholder {
 
 .header-contacts {
     list-style: none;
-    
+    padding-left: 0;
 }
 
 .header-contacts a {
@@ -242,6 +244,7 @@ input[type="search"]::-ms-input-placeholder {
     list-style: none;
     font-size: 21px;
     line-height: 21px;
+    padding-left: 0;
 }
 
 .login li {
@@ -249,7 +252,7 @@ input[type="search"]::-ms-input-placeholder {
 /* NB не рекомендуется задавать высоту и ширину одновременно, 
 так как может привести к проблеме переполнения контентом*/
     width: 123px;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 .login li:nth-child(2) {
@@ -270,9 +273,9 @@ input[type="search"]::-ms-input-placeholder {
 
 .sign-in a::before {
     content: "";
-    background-image: url("img/icon-login.svg");
+    background-image: url("../img/icon-login.svg");
     background-repeat: no-repeat;
-    background-size: 20px;
+    background-size: 20px auto;
     background-position: 17px center;
 }
 
@@ -290,11 +293,12 @@ input[type="search"]::-ms-input-placeholder {
 /* rules for profile-navigation*/
 .profile-navigation {
     list-style: none;
+    padding-left: 0;
 }
 
 .profile-navigation li {
     margin-top: 10px;
-    margin-left: 18px;
+/*    margin-left: 18px; */
 }
 
 .user {
@@ -309,7 +313,7 @@ input[type="search"]::-ms-input-placeholder {
 
 /*.profile-name a::before {
     content: "";
-    background-image: url("img/icon-user.svg");
+    background-image: url("../img/icon-user.svg");
     background-repeat: no-repeat;
     background-size: 20px;
     background-position: 13px center;
@@ -317,7 +321,7 @@ input[type="search"]::-ms-input-placeholder {
 
 .log-out {
     background-color: #fff;
-    background-image: url("img/icon-logout.svg");
+    background-image: url("../img/icon-logout.svg");
     background-repeat: no-repeat;
     background-size: 21px;
     background-position: 12px center;
@@ -342,7 +346,7 @@ input[type="search"]::-ms-input-placeholder {
     background-color: #32425c;
     box-shadow: 0px 5px #293449;
     margin: 0 auto;
-    margin-bottom: 60px;
+    padding-left: 0;
 }
 
 .header-navigation li {
@@ -373,6 +377,13 @@ input[type="search"]::-ms-input-placeholder {
 /* INDEX PAGE PROMO + SLIDERS*/
 main {
     padding-top: 60px;
+    padding-bottom: 86px;
+}
+
+.index-promo {
+    width: 940px;
+    margin: 0 auto;
+    padding-bottom: 85px; 
 }
 
 .category h2 {
@@ -403,7 +414,6 @@ main {
     background-size: 44px 65px;
     
 }
- 
 
 .tools {
     background-color: #3bbce3;
@@ -477,6 +487,10 @@ main {
     background-repeat: no-repeat;
     background-size: 620px 268px;
     background-position: contain;
+    width: 620px;
+    height: 268px;
+    /*Такие абсолютные размеры точно можно задавать, 
+    чтобы избежать растягивания фона до правого марджина?*/
     padding-top: 25px;
     padding-bottom: 34px;
     padding-left: 25px;
@@ -488,7 +502,9 @@ main {
     background-image: url("../img/drill.jpg");
     background-repeat: no-repeat;
     background-size: 620px 268px;
-    background-position: 50% 50%;
+    background-position: contain;
+    width: 620px;
+    height: 268px;
     padding-top: 25px;
     padding-bottom: 34px;
     padding-left: 25px;
@@ -512,7 +528,10 @@ main {
 
 .open {
     min-width: 195px;
+    position: relative;
+    top: 110px;
 }
+/* Не знаю, законно ли это, как легко ломается, но */
 
 .slider-button-left::before,
 .slider-button-right::before {
@@ -601,24 +620,118 @@ main {
 }
 */
 .popular-brands-list li {
-
+    border: 1px solid #e5e5e5;
     width: 218px;
     height: 143px;
-    border: 1px solid #e5e5e5;
+    
     margin-bottom: 20px;
 }
 /*изменить правила, чтобы вся карточка была ссылкой*/
 .popular-brands-list a {
+    
     vertical-align: middle;
     text-align: center;
     margin: 0 auto;
 }
 
+/*
+.bosch {
+    border: 1px solid transparent;
+    padding-top: 80px;
+    padding-right: 45px;
+    padding-bottom: 45px;
+    padding-left: 45px;
+    position: relative;
+    top: 55px;
+}
+*/
+
 .popular-brands-list img {
-    vertical-align: middle;
-    text-align: center;
+/*  so-so
+    position: relative;
+    top: 50%;
+    left: 50%;
+*/
     margin: 0 auto;
     background-color: #e5e5e5;
+
+/*  не получается спозиционировать по центру (в li лежит a, оборачивающая img  
+    object-position: 50% 50%;
+    object-fit: contain;
+*/    
+}
+
+.index-extra-services {
+    padding-top: 60px;
+    padding-bottom: 98px;
+    background-color: #f4f7f9;
+
+}
+
+.extra-services-container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+/*INDEX PAGE about us */
+
+.index-about-us {
+    width: 940px;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 86px;
+}
+
+
+
+.index-about-us h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.index-about-us p {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000;
+    max-width: 520px;
+    margin-top: 28px;
+}
+
+.index-about-us ul {
+    margin-top: 22px;
+   /* list-style-type: dash; */
+}
+
+.index-about-us li {
+    font-size: 18px;
+    line-height: 20px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.write-us,
+.about-us {
+    display: block;
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.about-us {
+    max-width: 220px;
+}
+
+.write-us {
+    max-width: 300px;
+}
+
+.small-map {
+    margin-top: 35px;
 }
 
 /* INNER PAGE*/
@@ -896,6 +1009,15 @@ a[class^="by-"]:active {
 отсуствия маркировки*/
 }
 
+.popular-brands-list,
+.slides ul,
+.categories-table,
+.sort-by ul,
+.search-results,
+.popular-products-list {
+    padding-left: 0;
+}
+
 .product-card {
     border: 1px solid #e5e5e5;
     width: 220px;
@@ -979,77 +1101,29 @@ p.new-price {
 }
 
 
-/*INDEX PAGE about us */
-
-.write-us,
-.about-us {
-    display: block;
-    margin-top: 40px;
-    margin-bottom: 86px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-.about-us {
-    max-width: 220px;
-}
-
-.write-us {
-    max-width: 300px;
-}
-
-.index-about-us {
-    margin-top: 80px;
-}
-
-.index-about-us h2 {
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: normal;
-    color: #000;
-    text-transform: uppercase;
-}
-
-.index-about-us p {
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 13px;
-    line-height: 24px;
-    color: #000;
-    max-width: 520px;
-    margin-top: 28px;
-}
-
-.index-about-us ul {
-    margin-top: 22px;
-   /* list-style-type: dash; */
-}
-
-.index-about-us li {
-    font-size: 18px;
-    line-height: 20px;
-    color: #000;
-    margin-bottom: 20px;
-}
-
-.small-map {
-    margin-top: 35px;
-}
-
 /* FOOTER */
 
 footer {
-    
     background-color: #32425c;
     color: #fff;
     font-size: 18px;
     line-height: 24px;
-    padding-left: 130px;
-    padding-right: 130px;
 }
 
-.footer-2 {
+.footer-part1,
+.footer-part2-container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.footer-part1 {
+    padding-bottom: 50px;
+}
+
+.footer-part2-wrap {
    background-color: #293449;
+   padding-top: 35px;
+   padding-bottom: 30px;
 }
 
 .footer-logo {
@@ -1064,39 +1138,33 @@ footer {
 
 .footer-contacts {
     margin-top: 30px;
-    margin-bottom: 0px;
-}
-
-.copyright {
-    margin-top: 90px;
-    margin-bottom: 0px;
-}
-
-.copyright + p {
-    margin-top: 0px;
+    margin-bottom: 0;
 }
 
 .copyright,
-.copyright + p,
-.webdeveloper,
-.email,
-.webdeveloper a,
-.email a {
+.feedback,
+.feedback a {
     font-size: 16px;
     line-height: 18px;
+}
+
+.copyright p {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .footer-contacts + a {
     color: #fff;
     font-size: 18px;
     line-height: 24px;
-    margin-top: 0;
+    
 }
 
 .footer-navigation ul {
     list-style: none;
-    float: right;
-    padding-left: 59px;
+    padding-left: 0;
+/*    float: right;
+    padding-left: 59px; */
 }
 
 .general-footer-navigation a {
@@ -1104,14 +1172,12 @@ footer {
 }
 
 .footer-categories a,
-.email a,
-.webdeveloper a {
+.feedback a {
     color: #ffd180;
 }
 
 .footer-navigation a:hover,
-.email a:hover,
-.webdeveloper a:hover {
+.feedback a:hover {
     text-decoration: underline;
 }
 
@@ -1125,18 +1191,19 @@ footer {
     text-decoration: none;
 }
 
-.email a:active,
-.webdeveloper a:active {
+.feedback a:active {
     color: #ee3643;
     text-decoration: none;
 }
 
 .footer-social ul {
     list-style: none;
+    padding-left:0;
 }
 
 .footer-social li {
     display: inline;
+    padding-right: 5px; /*temporary*/
 }
 
 .social-button {
@@ -1157,21 +1224,24 @@ footer {
 }
 
 .vk {
-    background-image: url("img/icon-vk.svg");
+    background-image: url("../img/icon-vk.svg");
     background-repeat: no-repeat;
     background-size: 26px 15px;
+    background-position: 50% 50%;
 }
 
 .fb {
-    background-image: url("img/icon-fb.svg");
+    background-image: url("../img/icon-fb.svg");
     background-repeat: no-repeat;
     background-size: 12px 22px;
+    background-position: 50% 50%;
 }
 
 .instagram {
-    background-image: url("img/icon-insta.svg");
+    background-image: url("../img/icon-insta.svg");
     background-repeat: no-repeat;
     background-size: 22px 22px; 
+    background-position: 50% 50%;
 }
 
 .modal {
