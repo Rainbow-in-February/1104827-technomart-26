@@ -34,6 +34,17 @@ a {
     text-decoration: none;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 header {
     background-color: #f4f7f9;
     padding-bottom: 60px;
@@ -673,6 +684,38 @@ main {
     margin: 0 auto;
 }
 
+.index-extra-services h3 {
+    font-size: 36px;
+    line-height: 36px;
+    color: #32425c;
+    text-transform: uppercase;
+}
+
+.services-delivery-container p,
+.services-loan-container p  {
+    width: 280px;
+    margin-top: 30px;
+}
+
+.services-guarantee-container p {
+    width: 380px;
+    margin-top: 30px;
+}
+
+.loan-request {
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.request-container {
+    width: 195px;
+    height: 38px;
+    background-color: #ee3643;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    
+}
 /*INDEX PAGE about us */
 
 .index-about-us {
@@ -682,6 +725,7 @@ main {
     padding-bottom: 86px;
 }
 
+.index-extra-services h2,
 .index-about-us h2,
 .tool-group-description h2 {
     font-size: 30px;
@@ -691,6 +735,7 @@ main {
     text-transform: uppercase;
 }
 
+.index-extra-services p,
 .index-about-us p,
 .tool-group-description p {
     font-family: "PT Sans", "Arial", sans-serif;
@@ -913,6 +958,7 @@ a[class^="by-"]:active {
 /* PRODUCT CARDS and THEIR BUTTONS + regular crimson buttons*/
 
 .button,
+.loan-request,
 .to-cart,
 .bookmark-it {
     font-family: "Cuprum";
