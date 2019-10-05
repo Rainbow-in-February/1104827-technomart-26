@@ -146,7 +146,7 @@ input[type="search"]::-ms-input-placeholder {
 
 .cart-navigation li { 
     margin-top: 30px; 
-    
+    display: inline-block;
     /* временно пока нет сетки */
 }
 
@@ -260,6 +260,7 @@ input[type="search"]::-ms-input-placeholder {
 
 .login li {
     min-height: 45px;
+    display: inline-block;
 /* NB не рекомендуется задавать высоту и ширину одновременно, 
 так как может привести к проблеме переполнения контентом*/
     width: 123px;
@@ -361,6 +362,8 @@ input[type="search"]::-ms-input-placeholder {
 }
 
 .header-navigation li {
+    display: inline-block;
+    margin: 0 auto;
     padding-top: 22px;
     padding-bottom: 18px;
     padding-left: 30px;
@@ -402,7 +405,8 @@ main {
     line-height: 30px;
     font-weight: 700;
     color: #fff;
-    margin-top: 0;
+    margin-top: 27px;
+    margin-bottom: 10px;
 }
 
 .materials,
@@ -410,10 +414,11 @@ main {
 .machines,
 .discounts,
 .delivery {
-/*    min-width: 300px; */
+    display: inline-block;
+    width: 300px;
     padding-left: 23px;
-    padding-top: 26px;
-    padding-bottom: 32px;
+/*    padding-top: 26px; */
+    padding-bottom: 22px;
     margin-bottom: 20px;
 }
 
@@ -421,7 +426,7 @@ main {
     background-color: #ffbf47;
     background-image: url("../img/icon-paint.svg");
     background-repeat: no-repeat;
-    background-position: 75% 50%;
+    background-position: 85% 50%;
     background-size: 44px 65px;
     
 }
@@ -430,7 +435,7 @@ main {
     background-color: #3bbce3;
     background-image: url("../img/icon-tools.svg");
     background-repeat: no-repeat;
-    background-position: 75% 50%;
+    background-position: 85% 50%;
     background-size: 75px 61px;
 }
 
@@ -441,7 +446,7 @@ main {
     width: 142px;
     position: relative;
     top: 50%;
-    left: 50%;
+    left: 85%;
     background-color: #3bbce3;
     background-image: url("../img/icon-tools.svg");
     background-repeat: no-repeat;
@@ -454,7 +459,7 @@ main {
     background-color: #dc91d8;
     background-image: url("../img/icon-machinery.svg");
     background-repeat: no-repeat;
-    background-position: 75% 50%;
+    background-position: 85% 50%;
     background-size: 78px 62px;
 }
 
@@ -462,7 +467,7 @@ main {
     background-color: #8ed78f;
     background-image: url("../img/icon-discount.svg");
     background-repeat: no-repeat;
-    background-position: 75% 50%;
+    background-position: 85% 50%;
     background-size: 59px 72px;
 }
 
@@ -470,15 +475,15 @@ main {
     background-color: #ffc047;
     background-image: url("../img/icon-delivery.svg");
     background-repeat: no-repeat;
-    background-position: 75% 50%;
+    background-position: 85% 50%;
     background-size: 78px 63px;
 }
 
 .category a {
     color: #fff;
     background-color: rgba(0, 0, 0, 10%);
-    min-width: 133px;
-    margin: 0 auto; 
+    width: 135px;
+    margin-top: 0;
 }
 /* btn size 135x38*/
 
@@ -538,7 +543,7 @@ main {
 }
 
 .open {
-    min-width: 195px;
+    width: 195px;
     position: relative;
     top: 110px;
 }
@@ -623,7 +628,7 @@ main {
 
 .popular-brands,
 .popular-products {
-    min-width: 253px;
+    width: 253px;
 }
 /*
 .popular-brands-list {
@@ -684,17 +689,61 @@ main {
     margin: 0 auto;
 }
 
+.services-tabs {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 70px;
+}
+
+.services-tabs button {
+    width: 240px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-family: inherit;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    padding-left: 23px;
+    color: #fff;
+    background-color: #32425c;
+    border: none;
+    box-shadow: inset 0 1px 0 0 #405069,
+                inset 0 -1px 0 0 #293449;
+    outline-style: none;
+}
+
+.services-tabs .tab-current {
+    background-color: #fff;
+    color: #32425c;
+    box-shadow: none;
+}
+
+.services-tabs button:not(.tab-current):hover {
+    background-color: #293449;
+}
+.services-tabs button:not(.tab-current):hover {
+    background-color: #293449;
+}
+
 .index-extra-services h3 {
     font-size: 36px;
     line-height: 36px;
     color: #32425c;
     text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.services-descriptions {
+    list-style: none;
+    padding-left: 0;
 }
 
 .services-delivery-container p,
 .services-loan-container p  {
     width: 280px;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .services-guarantee-container p {
@@ -703,19 +752,9 @@ main {
 }
 
 .loan-request {
-    text-align: center;
-    vertical-align: middle;
-    color: #fff;
+    width: 195px;
 }
 
-.request-container {
-    width: 195px;
-    height: 38px;
-    background-color: #ee3643;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    
-}
 /*INDEX PAGE about us */
 
 .index-about-us {
@@ -760,19 +799,15 @@ main {
 
 .write-us,
 .about-us {
-    display: block;
     margin-top: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
 }
 
 .about-us {
-    max-width: 220px;
+    width: 220px;
 }
 
 .write-us {
-    max-width: 300px;
+    width: 300px;
 }
 
 .small-map {
@@ -781,8 +816,18 @@ main {
 
 /* INNER PAGE*/
 
+.inner-main {
+    padding-top: 0;
+}
+
+.products-search-container {
+    width: 940px;
+    margin: 0 auto;
+}
+
 .breadcrumbs {
-    margin-top: 20px;
+    margin-top: 21px;
+    margin-bottom: 21px;
     list-style: none;
 }
 
@@ -810,7 +855,7 @@ section.suggestions {
     padding-left: 30px;
     padding-top: 32px;
     padding-bottom: 32px;
-    margin: 0 auto;
+    margin-top: 21px;
 }
 
 /* FILTERS */
@@ -921,46 +966,50 @@ a[class^="by-"]:active {
     border: none;
 }
 
-.button-sort-lt {
+.sort-lt {
+
     font-size: 0px;
     line-height: 0%;
     width: 0px;
     border-bottom: 12px solid #c5c5c5;
-    border-left: 6px solid #f7f3ec;
-    border-right: 6px solid #f7f3ec;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
 }
 
-.button-sort-gt {
+
+.sort-gt {
+
     font-size: 0px;
     line-height: 0%;
     width: 0px;
     border-top: 12px solid #c5c5c5;
-    border-left: 6px solid #f7f3ec;
-    border-right: 6px solid #f7f3ec;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
 }
 
-.button-sort-lt:hover {
+.sort-lt:hover {
     border-bottom: 12px solid #000;
 }
 
-.button-sort-gt:hover {
+.sort-gt:hover {
     border-top: 12px solid #000;
 }
-/*индикатор активности: пока не знаю, какой селектор нужен*/
-.button-sort-lt:active {
+/*индикатор активности: пока не знаю, какой селектор нужен; class = ltgt-current*/
+.sort-lt:active {
     border-bottom: 12px solid #ee3643;
 }
 
-.button-sort-gt:active {
+.sort-gt:active {
     border-top: 12px solid #ee3643;
 }
 
 /* PRODUCT CARDS and THEIR BUTTONS + regular crimson buttons*/
 
 .button,
-.loan-request,
 .to-cart,
 .bookmark-it {
+    display: block;
+    text-align: center;
     font-family: "Cuprum";
     font-size: 14px;
     line-height: 18px;
@@ -988,12 +1037,12 @@ a[class^="by-"]:active {
 .to-cart {
     color: #fff;
     background-color: #63a63e;
-    border-bottom: 3px solid #367315;
+    border-bottom: 1px solid transparent;
     border-radius: 3px;
-    padding-left: 49px;
-    padding-right: 45px;
+    width: 135px;
     padding-top: 11px;
     padding-bottom: 8px;
+    box-shadow: 0 3px 0 0 #367315;
 /* button size 135px x 35px + 3px bottom border 
 ??? word is 10px high, though the font size is 14px*/
 }
@@ -1006,7 +1055,9 @@ a[class^="by-"]:active {
 
 .to-cart:active {
     background-color: #518534;
-    border-bottom: 3px solid #518534;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    box-shadow: none;
 }
 
 .bookmark-it {
@@ -1016,8 +1067,7 @@ a[class^="by-"]:active {
     border-radius: 3px;
     padding-top: 9px;
     padding-bottom: 9px;
-    padding-left: 33px;
-    padding-right: 29px;
+    width: 135px;
 }
 
 .bookmark-it:hover {
@@ -1032,7 +1082,7 @@ a[class^="by-"]:active {
 }
 
 .buy-it li {
-    margin-bottom: 30px;
+    margin-bottom: 8px;
 }
 
 /*
@@ -1113,24 +1163,22 @@ a[class^="by-"]:active {
 /*у старой цены выравнивание по центру идёт от какого-то отступа. Я так понимаю, это отступ списка, в котором он находится, который определили через .product-card ul {margin: 0 auto} */
 
 .new-price {
+    display: block;
+    width: 141px;
     color: #fff;
     background-color: #ee3643;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 35px;
-    padding-right: 16px;
+    text-align: center;
     border: 1px solid transparent;
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
-    margin: 0 auto;
 /* 122px прямоугольник + 18-19 треугольная часть
 сняла в макете паддинги новой цены, но почему-то в браузере они выглядят гораздо больше*/
 }
 
-
-p.new-price {
-    
-    margin-left: 43px;
+.new-price p {
+    margin-left: 43px; /* НЕ РАБОТАЕТ АААААА*/
 }
 
 .new-price::after {
@@ -1143,7 +1191,61 @@ p.new-price {
     border-bottom: 20px solid #fff;
     position: relative;
     top: -6px;
-    left: 20px;
+    left: 30px;
+}
+
+.pagination-list {
+    list-style: none;
+    margin-top: 52px;
+    margin-bottom: 60px;
+    padding-left: 0;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+
+.pagination-list li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.pagination-list a {
+    display: inline-block;
+}
+
+.pagination-list a,
+.pagination-item-current {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+    width: 38px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pagination-item.next {
+    width: 140px;
+}
+
+a.pagination-item:hover {
+    border-color: #bdc6ca;
+}
+
+a.pagination-item:active {
+    border-color: #ee3643;
+}
+
+.pagination-item-current {
+    border-color: #ee3643;
+    background-color: #ee3643;
+    color: #fff; 
 }
 
 .description-wrap {
