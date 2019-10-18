@@ -720,7 +720,7 @@ main {
     background-color: rgba(0, 0, 0, 30%);
 }
 
-/* Подключить декор. картинки в промо-блоки*/
+
 
 .slider1 {
     background-color: #685c53;
@@ -1097,8 +1097,9 @@ aside {
     font-size: 13px;
     line-height: 18px;
     font-weight: normal;
+    text-transform: uppercase;
     background-color: #f7f3ec;
-    border: 1px solid #f7f3ec;
+    border: 1px solid transparent;
     border-radius: 3px;
     padding-top: 13px;
     padding-bottom: 14px;
@@ -1137,7 +1138,7 @@ aside {
 input[type="range"] {
     display: block;
     background-color: #f7f3ec;
-    border: 1px solid #f7f3ec;
+    border: 1px solid transparent;
     border-radius: 3px;
     max-width: 220px;
     max-height: 79px;
@@ -1148,7 +1149,7 @@ output {
     font-size: 17px;
     line-height: 18px;
     background-color: #f7f3ec;
-    border: 1px solid #f7f3ec;
+    border: 1px solid transparent;
     border-radius: 3px;
     width: 95px;
     padding: 13px 14px;
@@ -1175,7 +1176,7 @@ output {
 
 
 a[class^="by-"] {
-    color: #b2b2b2;
+    color: rgba(0, 0, 0, 30%);
     border-bottom: 1px dotted #ee3643;
 }
 
@@ -1296,14 +1297,12 @@ a[class^="by-"]:active {
 }
 
 .bookmark-it:hover {
-    border: 3px solid #32425c;
-    /*если меняется только цвет рамки, можем ли мы в этом 
-    свойстве указать только цвет (border-color) или важно полностью?*/
+    border-color: #32425c;
 }
 
 .bookmark-it:active {
-    border-color: #c1c6ce;
-    color: #c1c6ce;
+    border-color: rgba(50, 66, 92, 30%);
+    color: rgba(50, 66, 92, 30%);
 }
 
 .buy-it li {
@@ -1598,14 +1597,14 @@ footer {
     padding-right: 21px;
     padding-bottom: 21px;
     padding-left: 21px;
-    border: 1px solid #212a3a;
+    border: 1px solid transparent;
     border-radius: 50%;
 }
 
 .social-button:hover,
 .social-button:active {
     background-color: #ee3643;
-    border: 1px solid #ee3643;
+    border: 1px solid transparent;
 }
 
 .vk {
