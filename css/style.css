@@ -68,7 +68,7 @@ header {
     min-height: 42px;
     margin-top: 0;
     margin-right: auto;
-    margin-bottom: 0;
+    margin-bottom: 46px;
     margin-left: auto;
     padding-top: 0;
     display: flex;
@@ -91,13 +91,14 @@ header {
 .header-logo img {
     box-sizing: content-box;
 /*Почему-то исчезли лого вверху и внизу. Решила попробовать сменить значение бокс-сайзинга, и картинка вернулась. Так и должно быть или я придумала костыль?*/
+    margin-top: 0;
     padding-top: 11px;
     padding-bottom: 11px;
     padding-left: 55px;
     padding-right: 55px;
     background-color: #ee3643;
     box-shadow: 0px 5px #b52933;
-    margin-top: 0;
+    
 }
 
 /*a.header-logo img:visited {
@@ -120,17 +121,18 @@ header {
     margin-right: auto;
     margin-bottom: 0;
     margin-left: auto;
-    display: flex;
     padding-top: 0;
+    display: flex;
+    
 }
 
 .header-top-container input {
 /*    min-width: 270px; */
     flex-basis: auto;
     height: 42px;
+    margin-top: 0;
     padding-left: 49px;
     padding-top: 0;
-    margin-top: 0;
     flex-grow: 1;
     
 
@@ -154,6 +156,7 @@ header {
 .header-top-container input:focus {
     color: #000;
     background-color: #fff;
+    outline-width: 0.2px;
     outline-color: #fff;
 }
 
@@ -185,9 +188,11 @@ input[type="search"]::-ms-input-placeholder {
 
 .cart-navigation {
     margin-top: 0;
-/*    margin-left: 0;
-    margin-bottom: 0; */
-    margin: auto;
+    margin-left: 0;
+    margin-bottom: 0;
+/*    margin: auto; */
+    padding-left: 0;
+    padding-top: 0;
     min-height: 42px;
     flex-basis: 450px;
     flex-grow: 1;
@@ -196,36 +201,38 @@ input[type="search"]::-ms-input-placeholder {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
-    padding-left: 0;
-    padding-top: 0;
-    
+    align-items: stretch;
 }
 
 .cart-navigation li { 
     margin-top: 0;
     margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
     flex-basis: 150px;
+    min-height: 42px;
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+/*    align-items: center; */
 }
 
 .bookmarks,
 .cart,
 .order {
-/*    width: 150px;
-    height: 42px; 
-
-    margin-top: 11px;*/
-    margin-top: 0;
-    flex-basis: 100%;
+    min-height: 42px; 
+    margin: 0;
+/*    min-width: 150px;
+      flex-basis: 100%; */
     flex-grow: 1;
-    padding-top: 11px;
-    padding-bottom: 13px;
-/*    padding-left: 40px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+ /*    padding-left: 40px;
     padding-right: 22px;*/
     text-align: center;
+    font-size: 17px;
+    line-height: 18px;
     color: #fff;
 }
 
@@ -251,9 +258,6 @@ input[type="search"]::-ms-input-placeholder {
     background-color: #518534;
 }
 
-.bookmarks {
-    margin-left: 13px;
-}
 .cart-navigation li:first-child {
     background-image: url("../img/icon-bookmark.svg");
     background-repeat: no-repeat;
@@ -271,9 +275,7 @@ active 50%
    
 }
 
-.cart {
-    margin-left: 15px;
-}
+
  
 .cart-navigation li:nth-child(2) {
     background-image: url("../img/icon-cart.svg");
@@ -336,7 +338,7 @@ active 50%
     color: #ee3643;
     margin-left: 50px;
     margin-right: auto;
-    margin-top: 46px;
+    margin-top: 0;
     flex-basis: 197px;
     flex-grow: 1;
 }
@@ -346,7 +348,7 @@ active 50%
 /*    margin-left: 39px;*/
      margin-left: auto;
     margin-right: auto;
-    margin-top: 46px;
+    margin-top: 0;
     padding-top: 0;
     flex-basis: 270px;
     flex-grow: 1;
@@ -388,7 +390,7 @@ active 50%
     line-height: 21px;
     padding-left: 0;
     padding-top: 0;
-    margin-top: 36px;
+    margin-top: 0;
 /*    margin-left: auto;*/ 
     margin-left: 69px;
     display: flex;
@@ -425,7 +427,7 @@ active 50%
     background-color: #fff;
     padding-top: 11px;
     padding-bottom: 11px;
-    margin-top: 10px;
+    margin-top: 0;
     margin-bottom: 10px;
     padding-right: 25px;
 
@@ -471,7 +473,7 @@ active 50%
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-top: 46px;
+    margin-top: 0;
     margin-left: auto;
 /*    margin-right: 0;  */
     flex-grow: 1;
