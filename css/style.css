@@ -622,7 +622,8 @@ main {
 .index-promo {
     width: 940px;
     margin: 0 auto;
-    padding-bottom: 85px; 
+    margin-bottom: 75px; 
+/*    display: */
 }
 
 .category h2 {
@@ -720,7 +721,9 @@ main {
     background-color: rgba(0, 0, 0, 30%);
 }
 
-
+.slides {
+    margin-bottom: 53px;
+}
 
 .slider1 {
     background-color: #685c53;
@@ -835,15 +838,21 @@ main {
 /* INDEX POPULAR PRODUCTS AND BRANDS*/
 .heading-popular {
     background-color: #f9f5f0;
-    padding-top: 30px;
+    padding-top: 25px;
     padding-right: 24px;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
     padding-left: 30px;
-
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 940px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .heading-popular h2 {
     margin-top: 0;
+    margin-bottom: 0;
     font-size: 30px;
     line-height: 30px;
     font-weight: 400;
@@ -854,18 +863,27 @@ main {
 .popular-brands,
 .popular-products {
     width: 253px;
+    margin-left: auto;
 }
-/*
+
+.popular-products-list,
 .popular-brands-list {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 940px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
 }
-*/
+
 .popular-brands-list li {
     border: 1px solid #e5e5e5;
     width: 218px;
     height: 143px;
-    
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 /*изменить правила, чтобы вся карточка была ссылкой*/
 .popular-brands-list a {
@@ -1048,26 +1066,65 @@ main {
 .products-search-container {
     width: 940px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .breadcrumbs {
     margin-top: 21px;
-    margin-bottom: 21px;
+    margin-bottom: 10px;
     list-style: none;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 940px;
+    justify-content: flex-start;
+
+}
+
+.breadcrumbs li {
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+.breadcrumbs li:first-child {
+    margin-left: 0;
 }
 
 .breadcrumbs a,
 .breadcrumbs-current,
-section.suggestions {
+.suggestions {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     color: #000;
-    text-transform: uppercase;
+    
 }
 
-.breadcrumbs a:first-of-type {
-    background-image: url("img/icon-home.svg");
+.suggestions {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 700px;
+    width: 700px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch; /* ? */
+}
+
+.back-home {
+    padding-top: 7px;
+    padding-right: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+
+    background-image: url(../img/icon-home.svg);
+    background-repeat: no-repeat;
+    background-size: 14px 12px;
+    background-position: 0 center;
 }
 
 .catalog-group {
@@ -1080,17 +1137,27 @@ section.suggestions {
     padding-left: 30px;
     padding-top: 32px;
     padding-bottom: 32px;
-    margin-top: 21px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-basis: 940px;
 }
 
 /* FILTERS */
 
-/*
+
 aside {
-    max-width: 220px;
     margin-right: 20px;
+    margin-top: 10px;
+    flex-direction: column;
+    flex-basis: 220px;
+/*    max-width: 220px; */
+    justify-content: flex-start;
 }
-*/
+
+.filter {
+    margin-top: 0;
+}
+
 .filter, 
 .sort-by h2,
 .sort-by {
@@ -1106,9 +1173,6 @@ aside {
     padding-left: 19px;
 }
 
-.filter {
-    max-width: 220px;
-} 
 
 .price-filter label,
 .brand-filter h3,
@@ -1174,6 +1238,20 @@ output {
     margin-top: 70px;
 }
 
+.sort-by {
+    display: flex;
+    flex-direction: row;
+/*    flex-wrap: wrap; */
+    flex-basis: 700px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sort-by ul {
+    display: flex;
+    flex-direction: row;
+
+}
 
 a[class^="by-"] {
     color: rgba(0, 0, 0, 30%);
@@ -1229,6 +1307,16 @@ a[class^="by-"]:active {
     border-top: 12px solid #ee3643;
 }
 
+.search-results {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 700px;
+    width: 700px;
+/* wider than 700px in the browser now*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 /* PRODUCT CARDS and THEIR BUTTONS + regular crimson buttons*/
 
 .button,
@@ -1266,9 +1354,13 @@ a[class^="by-"]:active {
     border-bottom: 1px solid transparent;
     border-radius: 3px;
     width: 135px;
-    padding-top: 11px;
-    padding-bottom: 8px;
+    padding-top: 10px;
+    padding-bottom: 7px;
     box-shadow: 0 3px 0 0 #367315;
+    background-image: url(../img/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: 14px center;
 /* button size 135px x 35px + 3px bottom border 
 ??? word is 10px high, though the font size is 14px*/
 }
@@ -1281,9 +1373,10 @@ a[class^="by-"]:active {
 
 .to-cart:active {
     background-color: #518534;
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     box-shadow: none;
+/* во время клика увеличивается нижний отступ до след. кнопки "в закладки"*/
 }
 
 .bookmark-it {
@@ -1291,8 +1384,8 @@ a[class^="by-"]:active {
     background-color: #fff;
     border: 3px solid #63a63e;
     border-radius: 3px;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     width: 135px;
 }
 
@@ -1334,17 +1427,24 @@ a[class^="by-"]:active {
 .sort-by ul,
 .search-results,
 .popular-brands-list,
-.popular-products-list {
+.popular-products-list,
+.buy-it,
+.prices {
     padding-left: 0;
 }
 
 .product-card {
     border: 1px solid #e5e5e5;
-    width: 220px;
-    margin-top: 21px;
-    padding-top: 44px;
-    padding-bottom: 21px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+/*    padding-top: 44px;
+    padding-bottom: 21px; */
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 218px;
+    justify-content: flex-start;
+    align-content: center;
 }
 
 /* так не работает
@@ -1356,6 +1456,21 @@ a[class^="by-"]:active {
 }
 */
 
+.product-card img {
+    order: 0;
+    margin-bottom: 5px;
+}
+
+.buy-it {
+    order: 1;
+}
+
+.prices,
+.new-price {
+    order: 3;
+    margin-bottom: 20px;
+}
+
 .product-card h3 a,
 .product-card h3 {
     font-family: "PT Sans", "Arial", sans-serif;
@@ -1364,6 +1479,9 @@ a[class^="by-"]:active {
     font-weight: 700;
     color: #000;
     text-align: center;
+    order: 2;
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 .product-card ul {
@@ -1376,7 +1494,7 @@ a[class^="by-"]:active {
     font-size: 17px;
     line-height: 18px;
     font-weight: 700;
-    margin-top: 14px;
+    margin-top: 10px;
     
 }
 
@@ -1401,8 +1519,9 @@ a[class^="by-"]:active {
 сняла в макете паддинги новой цены, но почему-то в браузере они выглядят гораздо больше*/
 }
 
-.new-price p {
-    margin-left: 43px; /* НЕ РАБОТАЕТ АААААА*/
+p.new-price  {
+    margin-left: 42px;
+    margin-top: auto;
 }
 
 .new-price::after {
