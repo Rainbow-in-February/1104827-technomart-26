@@ -146,7 +146,7 @@ header {
     background-repeat: no-repeat;
     background-size: 17px 17px;
     background-position: 17px center;
-    /*opacity for icon 30% calm, 100% hover, focus #ee3643*/
+/*    opacity for icon 30% calm, 100% hover, focus #ee3643*/
 }
 
 .header-top-container input:hover,
@@ -165,16 +165,17 @@ header {
 /*
 .header-top-container input::before {
     content: "";
+    display: block;
     position: absolute;
     top: 12px;
-    left: 20px;
+    left: 369px;
     height: 100%;
     width: 17px;
-    background-image: url("../img/icon-search.svg");
+    background-image: url(../img/icon-search.svg);
     background-repeat: no-repeat;
     background-size: 17px 17px;
     background-position: left center;
-    outline: 1px solid white;
+    outline: 1px solid yellow;
      как задать цвет и прозрачность иконке? 
 }*/
 
@@ -962,40 +963,15 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-/*  flex-basis: 143px;  vertical-align: middle;
-    text-align: center;
-    margin: 0 auto;*/
 }
-
-/*
-.bosch {
-    border: 1px solid transparent;
-    padding-top: 80px;
-    padding-right: 45px;
-    padding-bottom: 45px;
-    padding-left: 45px;
-    position: relative;
-    top: 55px;
-}
-*/
 
 .popular-brands-list img {
-/*  so-so
-    position: relative;
-    top: 50%;
-    left: 50%;
-*/
     margin: 0 auto;
     background-color: #e5e5e5;
-
-/*  не получается спозиционировать по центру (в li лежит a, оборачивающая img  
-    object-position: 50% 50%;
-    object-fit: contain;
-*/    
 }
 
 .index-extra-services {
-    padding-top: 60px;
+    padding-top: 60px; /* top padding is ~20px bigger in fact, though the value is right*/
     padding-bottom: 98px;
     background-color: #f4f7f9;
 
@@ -1006,10 +982,21 @@ main {
     margin: 0 auto;
 }
 
+.services-flexcontainer {
+    margin-top: 70px;
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+/*    justify-content: space-between;*/ 
+justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
 .services-tabs {
     list-style: none;
-    padding-left: 0;
-    margin-top: 70px;
+    padding: 0;
+    margin: 0;
 }
 
 .services-tabs button {
@@ -1048,28 +1035,54 @@ main {
     line-height: 36px;
     color: #32425c;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
+    margin-top: 0;
 }
 
 .services-descriptions {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.services-delivery-container,
+.services-guarantee-container,
+.services-loan-container {
+    margin-left: 80px;
+    margin-right: auto;
 }
 
 .services-delivery-container p,
 .services-loan-container p  {
     width: 280px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
 .services-guarantee-container p {
     width: 380px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .loan-request {
     width: 195px;
+}
+
+.services-delivery-container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2174px;
+    left: 675px;
+/*    flex-direction: row;
+    justify-content: flex-end; margin-left: auto;*/
+    width: 468px;
+    height: 261px;
+    
+    background-image: url(../img/delivery-lory.png);
+    background-repeat: no-repeat;
+    background-size: 468px 261px;
+    background-position: 0px 0px;
 }
 
 /*INDEX PAGE about us */
@@ -1099,7 +1112,7 @@ main {
     line-height: 24px;
     color: #000;
 /*    max-width: 520px; for index-about-us block*/
-    margin-top: 28px;
+    margin-top: 26px;
 }
 
 .index-about-us ul {
