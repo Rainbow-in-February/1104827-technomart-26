@@ -1055,8 +1055,8 @@ justify-content: flex-start;
 .services-delivery-container p,
 .services-loan-container p  {
     width: 280px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .services-guarantee-container p {
@@ -1066,6 +1066,7 @@ justify-content: flex-start;
 
 .loan-request {
     width: 195px;
+    margin-top: 23px;
 }
 
 .services-delivery-container::after {
@@ -1082,6 +1083,40 @@ justify-content: flex-start;
     background-image: url(../img/delivery-lory.png);
     background-repeat: no-repeat;
     background-size: 468px 261px;
+    background-position: 0px 0px;
+}
+
+.services-guarantee-container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2154px;
+    left: 755px;
+/*    flex-direction: row;
+    justify-content: flex-end; margin-left: auto;*/
+    width: 468px;
+    height: 261px;
+    
+    background-image: url(../img/guarantee.png);
+    background-repeat: no-repeat;
+    background-size: 389px 283px;
+    background-position: 0px 0px;
+}
+
+.services-loan-container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2154px;
+    left: 678px;
+/*    flex-direction: row;
+    justify-content: flex-end; margin-left: auto;*/
+    width: 465px;
+    height: 285px;
+    
+    background-image: url(../img/loan.png);
+    background-repeat: no-repeat;
+    background-size: 465px 285px;
     background-position: 0px 0px;
 }
 
