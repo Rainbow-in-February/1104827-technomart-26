@@ -613,7 +613,7 @@ active 50%
     color: rgba(255, 255, 255, 50%);
 }
 
-/* INDEX PAGE PROMO + SLIDERS*/
+/* INDEX PAGE PROMO + SLIDES*/
 main {
     padding-top: 60px;
 /*    padding-bottom: 86px; влияет на внутр.страницу: после голубого блока появился отступ*/
@@ -626,13 +626,58 @@ main {
 /*    display: */
 }
 
+.categories-table {
+    margin-bottom: 53px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 940px;
+    justify-content: flex-start;
+/*    align-content: flex-start;
+    align-items: flex-start;*/
+}
+
+.categories-line1,
+.categories-table-line2 { 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/*
+.categories-table-line2 {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 940px;
+    justify-content: space-between;
+    align-items: flex-start;
+} 
+*/
+
+.categories-line2,
+.slides ul {
+    padding: 0;
+    margin: 0;
+}
+
+.categories-line2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .category h2 {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
     color: #fff;
-    margin-top: 27px;
-    margin-bottom: 10px;
+    margin-top: 21px;
+    margin-bottom: 11px;
 }
 
 .materials,
@@ -640,12 +685,13 @@ main {
 .machines,
 .discounts,
 .delivery {
-    display: inline-block;
+    
     width: 300px;
+    min-height: 123px;
     padding-left: 23px;
-/*    padding-top: 26px; */
     padding-bottom: 22px;
-    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .materials {
@@ -654,7 +700,9 @@ main {
     background-repeat: no-repeat;
     background-position: 85% 50%;
     background-size: 44px 65px;
-    
+    margin-left: 0;
+    margin-right: 10px;
+
 }
 
 .tools {
@@ -663,6 +711,7 @@ main {
     background-repeat: no-repeat;
     background-position: 85% 50%;
     background-size: 75px 61px;
+    margin-right: 10px;
 }
 
 /*
@@ -695,6 +744,8 @@ main {
     background-repeat: no-repeat;
     background-position: 85% 50%;
     background-size: 59px 72px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .delivery {
@@ -703,6 +754,8 @@ main {
     background-repeat: no-repeat;
     background-position: 85% 50%;
     background-size: 78px 63px;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .category a {
@@ -722,36 +775,49 @@ main {
 }
 
 .slides {
-    margin-bottom: 53px;
+    flex-basis: 620px;
+    margin: 0;
+    padding: 0;
 }
 
-.slider1 {
+.slide1,
+.slide2 {
+    margin: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 620px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.slide1 {
     background-color: #685c53;
     background-image: url("../img/hammer-drill.jpg");
     background-repeat: no-repeat;
-    background-size: 620px 268px;
+    background-size: 620px 266px;
     background-position: contain;
     width: 620px;
-    height: 268px;
+    height: 266px;
     /*Такие абсолютные размеры точно можно задавать, 
     чтобы избежать растягивания фона до правого марджина?*/
-    padding-top: 25px;
-    padding-bottom: 34px;
     padding-left: 25px;
-    margin-bottom: 10px;
+    margin-right: 10px;
+/*    margin-bottom: 10px; */
 }
 
-.slider2 {
+.slide2 {
     background-color: #685c53;
     background-image: url("../img/drill.jpg");
     background-repeat: no-repeat;
     background-size: 620px 268px;
     background-position: contain;
     width: 620px;
-    height: 268px;
-    padding-top: 25px;
-    padding-bottom: 34px;
+    height: 266px;
     padding-left: 25px;
+    margin-right: 10px;
+/*    margin-bottom: 10px; */
 }
 
 .slides h2 {
@@ -759,8 +825,8 @@ main {
     line-height: 36px;
     text-transform: uppercase;
     color: #fff;
-    margin-top: 0;
-    margin-bottom: 5px;
+    margin-top: 23px;
+    margin-bottom: 3px;
 }
 
 .slides p {
@@ -772,13 +838,13 @@ main {
 
 .open {
     width: 195px;
-    position: relative;
-    top: 110px;
+    margin-top: auto;
+    margin-bottom: 20px;
 }
 /* Не знаю, законно ли это, как легко ломается, но */
 
-.slider-button-left::before,
-.slider-button-right::before {
+.slide-button-left::before,
+.slide-button-right::before {
     content: "";
     font-size: 0px;
     padding-top: 16px;
@@ -790,27 +856,27 @@ main {
     
 }
 
-.slider-button-left {
+.slide-button-left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
     transform-origin: 50% 50%;
 }
 
-.slider-button-right {
+.slide-button-right {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
     -ms-transform: rotate(-135deg);
     transform-origin: 50% 50%;
 }
 
-.slider-pagination-list {
+.slide-pagination-list {
     list-style: none;
 }
-.slider-pagination-list li {
+.slide-pagination-list li {
     display: inline;
 }
-.slider-pagination-list li:first-of-type::before {
+.slide-pagination-list li:first-of-type::before {
     content: "";
     font-size: 0px;
     padding-top: 5px;
@@ -822,7 +888,7 @@ main {
     background-color: #fff;
    }
 
-.slider-pagination-current::after {
+.slide-pagination-current::after {
     content: "";
     font-size: 0px;
     padding-top: 5px;
@@ -884,13 +950,21 @@ main {
     height: 143px;
     margin-top: 10px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 218px;
+    align-items: stretch;
 }
-/*изменить правила, чтобы вся карточка была ссылкой*/
+
 .popular-brands-list a {
-    
-    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+/*  flex-basis: 143px;  vertical-align: middle;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto;*/
 }
 
 /*
@@ -1336,8 +1410,8 @@ a[class^="by-"]:active {
     border: 1px solid transparent;
     border-radius: 3px;
     color: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 9px;
+    padding-bottom: 9px;
 }
 
 .button:hover {
@@ -1409,7 +1483,8 @@ a[class^="by-"]:active {
 }
 */
 
-.categories-table,
+.categories-line1,
+.categories-line2,
 .slides ul,
 .sort-by ul,
 .search-results,
@@ -1422,7 +1497,8 @@ a[class^="by-"]:active {
 отсуствия маркировки*/
 }
 
-.categories-table,
+.categories-line1,
+.categories-line2,
 .slides ul,
 .sort-by ul,
 .search-results,
