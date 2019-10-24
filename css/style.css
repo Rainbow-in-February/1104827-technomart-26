@@ -1300,10 +1300,10 @@ aside {
 
 .filter {
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .filter, 
-.sort-by h2,
 .sort-by {
     font-size: 13px;
     line-height: 18px;
@@ -1312,26 +1312,38 @@ aside {
     background-color: #f7f3ec;
     border: 1px solid transparent;
     border-radius: 3px;
-    padding-top: 13px;
-    padding-bottom: 14px;
-    padding-left: 19px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 20px;
+    padding-right: 15px;
 }
 
+.sort-by h2 {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: normal;
+    font-family: "PT Sans", "Arial", sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+}
 
 .price-filter label,
 .brand-filter h3,
 .power-filter h3 {
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 17px;
     line-height: 30px;
     font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .brand-filter h3,
 .power-filter h3 {
-    margin-top: 25px;
-    margin-bottom: 25px;
+/*    margin-top: 20px;     margin-bottom: 20px;*/
+    margin-top: 43px; /*temporary while margins merge*/
+
 }
 
 /*
@@ -1343,34 +1355,57 @@ aside {
     color: #c5c5c5;
 }  */
 
-input[type="range"] {
-    display: block;
+.price-range-wrap {
     background-color: #f7f3ec;
     border: 1px solid transparent;
     border-radius: 3px;
     max-width: 220px;
     max-height: 79px;
     padding: 30px 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 10px;
+    margin-bottom: 25px;
 }
 
 output {
     font-size: 17px;
     line-height: 18px;
+    text-align: center;
     background-color: #f7f3ec;
     border: 1px solid transparent;
     border-radius: 3px;
     width: 95px;
-    padding: 13px 14px;
-    margin-bottom: 25px;
+    padding: 9px 14px;
+    
 }
 
 .brand-filter label,
 .power-filter label {
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 15px;
     line-height: 20px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.brand-filter input,
+.power-filter input {
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 .button-filter {
+    display: block;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
@@ -1378,7 +1413,8 @@ output {
     border: 1px solid #e5e5e5;
     border-radius: 3px;
     width: 140px;
-    padding: 5px 38px;
+    padding-top: 9px;
+    padding-bottom: 9px;
     margin-top: 70px;
 }
 
@@ -1386,15 +1422,28 @@ output {
     display: flex;
     flex-direction: row;
 /*    flex-wrap: wrap; */
-    flex-basis: 700px;
+    width: 700px;
     justify-content: space-between;
     align-items: center;
 }
 
 .sort-by ul {
+    margin: 0;
+    margin-left: 140px;
+    margin-right: 45px;
+    padding: 0;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+}
 
+.sort-by li:not(:first-of-type) {
+    margin-left: 65px;
+}
+
+.sort-by li {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 a[class^="by-"] {
@@ -1685,19 +1734,24 @@ p.new-price  {
 
 .pagination-list {
     list-style: none;
-    margin-top: 52px;
-    margin-bottom: 60px;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
 }
 
 
 .pagination-list li {
-    display: inline-block;
+    margin-top: 32px;
+    margin-bottom: 60px;
     margin-right: 10px;
+
 }
 
 .pagination-list a {
@@ -1715,8 +1769,8 @@ p.new-price  {
     width: 38px;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 9px;
+    padding-bottom: 9px;
 }
 
 .pagination-item.next {
@@ -1739,8 +1793,8 @@ a.pagination-item:active {
 
 .description-wrap {
     background-color: #f2f6f8;
-    padding-top: 65px;
-    padding-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .tool-group-description {
