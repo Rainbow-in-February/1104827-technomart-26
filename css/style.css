@@ -866,7 +866,6 @@ main {
     width: 135px;
     margin-top: 0;
 }
-/* btn size 135x38*/
 
 .category a:hover {
     background-color: rgba(0, 0, 0, 20%);
@@ -941,7 +940,6 @@ main {
     margin-top: auto;
     margin-bottom: 20px;
 }
-/* Не знаю, законно ли это, как легко ломается, но */
 
 .slide-button-left::before,
 .slide-button-right::before {
@@ -1166,6 +1164,11 @@ justify-content: flex-start;
 .services-loan-container {
     margin-left: 80px;
     margin-right: auto;
+}
+
+.services-guarantee-container,
+.services-loan-container {
+    display: none;
 }
 
 .services-delivery-container p,
